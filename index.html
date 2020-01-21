@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html class=''>
+<head>
+    <title>The FrogBother</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='chatstyle.css'>
+  <!--  <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#mycontactslist li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+</script>
+-->
+
+</head>
+
+<body>
+    <div id="main"><img src="images/logo.jpg" style="display: block; margin-left: auto;  margin-right: auto;padding-bottom:10px;" /></div>
+        <div id="frame">
+
+            <div id="sidepanel">
+
+
+                <div id="profile">
+                    <div class="wrap">
+                        <img id="profile-img" src="images/frogbother.jpg" class="online" alt="" />
+                        <p><b>Vito Croakleone</b></p>
+                        <div id="status-options">
+                            <ul>
+                                <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+                                <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+                                <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+                                <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="search">
+                    <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+                    <input type="text" placeholder="Search contacts..." id="myInput" />
+                </div>
+
+                <div id="contacts">
+
+
+
+
+
+                    <ul class="tab" id="mycontactslist">
+                        <li class="contact tablinks" onclick="chatWith(event, 'loiuse');  ">
+                            <div class="wrap">
+                                <span class="contact-status online"></span>
+                                <img src="images/micheal.jpg" alt="" />
+                                <div class="meta">
+                                    <p class="name">Michael</p>
+                                    <p class="preview">You just got LITT up, Mike.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact active tablinks" onclick="chatWith(event, 'sonny'); " id="defaultOpen">
+                            <div class="wrap">
+                                <span class="contact-status busy"></span>
+                                <img src="images/sonny.jpg" alt="" />
+                                <div class="meta">
+                                    <p class="name">Sonny</p>
+                                    <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact tablinks" onclick="chatWith(event, 'fredo')" ;>
+                            <div class="wrap">
+                                <span class="contact-status online"></span>
+                                <img src="images/fredo.jpg" alt="" />
+                                <div class="meta">
+                                    <p class="name">Fredo</p>
+                                    <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="content tabcontent" id="loiuse">
+                <div class="contact-profile">
+                    <img src="images/micheal.jpg" alt="" />
+                    <p>Michael</p>
+                    <div class="social-media">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="messages myloiuse" id="msgmyloiuse">
+                    <ul>
+
+                        <li class="replies">
+                            <img src="images/micheal.jpg" alt="" />
+                            <p>I’m here, Pop. I’ll take care of you now. I’m with you now. I’m with you.<br /><font class="messagetime">08-08-2019 09:30 PM</font></p>
+                        </li>
+
+                        <li class="sent">
+                            <img src="images/frogbother.jpg" alt="" />
+                            <p>keep your friends close, but your enemies closer<br /><font class="messagetime">08-08-2019 09:32 PM</font></p>
+                        </li>
+
+                        <li class="replies">
+                            <img src="images/micheal.jpg" alt="" />
+                            <p>My father held a gun to his head, and my father assured the bandleader that either his signature or his brains would be on the contract<br /><font class="messagetime">08-08-2019 09:30 PM</font></p>
+                        </li>
+
+
+
+
+                    </ul>
+                </div>
+                <div class="message-input">
+                    <div class="wrap">
+                        <input type="text" placeholder="Write your message to loiuse..." class="entermessage" id="myloiuse1" />
+                        <button class="submit" id="myloiuse1"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content tabcontent" id="sonny">
+                <div class="contact-profile">
+                    <img src="images/sonny.jpg" alt="" />
+                    <p>Sonny</p>
+                    <div class="social-media">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="messages mysonny" id="msgmysonny">
+                    <ul>
+
+                        <li class="replies">
+                            <img src="images/sonny.jpg" alt="" />
+                            <p>Well, Then Business Will Have To Suffer, All Right?<br /><font class="messagetime">06-12-2019 08:20 PM</font></p>
+                        </li>
+                        <li class="sent">
+                            <img src="images/frogbother.jpg" alt="" />
+                            <p>Not really!!<br /><font class="messagetime">06-12-2019 08:22 PM</font></p>
+                        </li>
+                        <li class="replies">
+                            <img src="images/sonny.jpg" alt="" />
+                            <p>So? What's Your Answer Gonna Be, Pop?<br /><font class="messagetime">06-12-2019 08:21 PM</font></p>
+                        </li>
+                        <li class="replies">
+                            <img src="images/sonny.jpg" alt="" />
+                            <p>This Is Business And This Man Is Taking It Very, Very Personal.<br /><font class="messagetime">06-12-2019 08:22 PM</font></p>
+                        </li>
+                        <li class="sent">
+                            <img src="images/frogbother.jpg" alt="" />
+                            <p>What Are You Talking About? <br /><font class="messagetime">06-12-2019 08:24 PM</font></p>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+
+                <div class="message-input">
+                    <div class="wrap">
+                        <input type="text" placeholder="Write your message..." class="entermessage" id="mysonny" />
+                        <button class="submit" id="mysonny"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content tabcontent" id="fredo">
+                <div class="contact-profile">
+                    <img src="images/fredo.jpg" alt="" />
+                    <p>Fredo</p>
+                    <div class="social-media">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="messages myfredo" id="msgmyfredo">
+                    <ul>
+
+
+                        <li class="sent">
+                            <img src="images/frogbother.jpg" alt="" />
+                            <p>Freddie, that thing can't be real.<br /><font class="messagetime">09-01-2020 10:00 AM</font></p>
+                        </li>
+                        <li class="replies">
+                            <img src="images/fredo.jpg" alt="" />
+                            <p>Sure it is. That's why they call him Superman<br /><font class="messagetime">09-01-2020 10:03 AM</font></p>
+                        </li>
+                        <li class="replies">
+                            <img src="images/fredo.jpg" alt="" />
+                            <p>You believe that? It's true, that's the secret. You wanna try it when we go out on the lake?<br /><font class="messagetime">09-01-2020 10:15 AM</font></p>
+                        </li>
+                        <li class="sent">
+                            <img src="images/frogbother.jpg" alt="" />
+                            <p>Oh yeah, did Michael Jordan tell you that?<br /><font class="messagetime">09-01-2020 10:30 AM</font></p>
+                        </li>
+                        <li class="replies">
+                            <img src="images/fredo.jpg" alt="" />
+                            <p>Uno... por favor...<br /><font class="messagetime">09-01-2020 10:31 AM</font></p>
+                        </li>
+                       
+
+                    </ul>
+                </div>
+
+
+                <div class="message-input">
+                    <div class="wrap">
+                        <input type="text" placeholder="Write your message..." class="entermessage" id="myfredo" />
+                        <button class="submit" id="myfredo"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+<script src="chatroom.js"></script>
+
+    </body>
+</html>
