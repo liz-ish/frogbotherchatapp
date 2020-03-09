@@ -10,11 +10,11 @@
 console.log( "ready!" );
 
 
-
-$.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
-	global flag;
+var flag;
 	
-		console.log("here it is:");
+$.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
+	
+console.log("here it is:");
 console.log("Data Loaded:" + data);
 
 	var text = data ;
