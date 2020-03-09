@@ -12,8 +12,9 @@ console.log( "ready!" );
 
 
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
-	var myfinalresult = this;
-	console.log("here it is:");
+	var myfinalresult = function(){
+	
+		console.log("here it is:");
 console.log("Data Loaded:" + data);
 
 	var text = data ;
@@ -39,7 +40,9 @@ console.log("Data Loaded:" + data);
 	 	}
 
 
-
+		
+	};
+	
 });
 console.log("and final result is " + finalresult);
 
