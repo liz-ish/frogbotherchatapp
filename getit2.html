@@ -5,7 +5,7 @@
 <body>
 
 <p id="myparagraph">hello</p>
-	<form id="thisformshouldsubmit" action="something.php" >
+	<form id="thisformshouldsubmit" action="something.php" onsubmit="return validateForm()" >
 	<input type="text">
 	<input type="submit" name"button" value="Mybutton">
 	</form>
@@ -13,18 +13,12 @@
 	
 console.log( "ready!" );
 var flag = false;
+
 	
-//Start Preparing Token Client Side
-var getthevalue ;
+function validateForm() {
 
-var inner = function(x) {
-
-console.log("FORM IS:" + x );
-$("#myparagraph").html("this is" + x);
-//$("#thisformshouldsubmit").attr("onsubmit","false");
-	if (x == "false") {$("#thisformshouldsubmit").event.preventDefault();}
-}
-
+	
+	var inner = function(x) {console.log("FORM IS:" + x );$("#myparagraph").html("this is" + x);}
 
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
 console.log("here it is:");
@@ -53,10 +47,19 @@ console.log("Data Loaded:" + data);
 		
 	
 });
-console.log("global flag is " + flag);
+	
+	
+	
+return inner.x;
+}
+	
+	
+	
 
 
 console.log("global flag is " + flag);
+
+
  // The last brackets execute the outer function
 
 	
