@@ -20,7 +20,7 @@ var inner = function(x) { console.log("FORM IS:" + x ); return x;}
 
  
 $(document).on('submit','form#thisformshouldsubmit',function(inner){
-   return inner;
+   window.alert(inner);;
    
 });
 	
