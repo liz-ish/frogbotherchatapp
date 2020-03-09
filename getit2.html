@@ -16,8 +16,10 @@ var flag = false;
 	
 //function validateForm() {
 
-var inner = function(x) {console.log("FORM IS:" + x );$("#myparagraph").html("this is" + x);}
-console.log("LET'S READ OBJECT: " + inner);
+var inner = function(x) {console.log("FORM IS:" + x );$("#myparagraph").html("this is" + x);
+			if (x === "false"){window.alert("this is false");}
+			else (window.alert("this is not false!");)
+			}
 
 
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
