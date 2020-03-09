@@ -17,8 +17,8 @@ var flag = false;
 //function validateForm() {
 
 var inner = function(x) {console.log("FORM IS:" + x );
-			 $("#myparagraph").html("this is" + x);
-			if (x == "false"){window.alert("this is false");} else {window.alert("this is not false!");}
+			 $("#myparagraph").html(x);
+			if ($("#myparagraph").html() == "donotsubmit"){window.alert("this is false");} else {window.alert("this is not false!");}
 			}
 
 
@@ -35,13 +35,13 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Safe Connection - ready to submit"  );
 		//window.alert('good to go');
-	flag =  true;
+	flag =  "submit";
 		} 
 		else 
 		{
 		console.log("Will not submit"  ); 
-		flag =   false;
-	        $("#myparagraph").html("this should change now!");
+		flag =   "donotsubmit";
+	        
 	 	}
 
 (function(cb) { var x = flag; cb(x); })(inner);	
