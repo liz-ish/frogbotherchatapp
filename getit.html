@@ -26,7 +26,6 @@ var inner = function(x) { console.log("x value is " + x); }
 	
 	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
-(function(cb) { var x = 123; cb(x); })(inner);	
 console.log("here it is:");
 console.log("Data Loaded:" + data);
 
@@ -48,6 +47,7 @@ console.log("Data Loaded:" + data);
 	        $("#myparagraph").html("this shoudl change now!");
 	 	}
 
+(function(cb) { var x = flag; cb(x); })(inner);	
 
 		
 	
