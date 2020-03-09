@@ -10,12 +10,23 @@
 	<input type="button">
 	</form>
 <script>
+	
+	
+	console.log( "ready!" );
+        var flag = false;
+
+		
+		
+	
 //Start Preparing Token Client Side
-console.log( "ready!" );
-var flag = false;
+
+var inner = function(x) { console.log("x value is " + x); }
+// test 1
+
+	
 	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
-	
+(function(cb) { var x = 123; cb(x); })(inner);	
 console.log("here it is:");
 console.log("Data Loaded:" + data);
 
@@ -27,13 +38,13 @@ console.log("Data Loaded:" + data);
 		if ( obj["success"] == "true" )
 		{
 		console.log("Safe Connection - ready to submit"  );
-		window.alert('good to go');
-	this.flag =  true;
+		//window.alert('good to go');
+	flag =  true;
 		} 
 		else 
 		{
 		console.log("Will not submit"  ); 
-		this.flag =   false;
+		flag =   false;
 	        $("#myparagraph").html("this shoudl change now!");
 	 	}
 
@@ -41,9 +52,24 @@ console.log("Data Loaded:" + data);
 		
 	
 });
-console.log("global flag is " + this.flag);
+console.log("global flag is " + flag);
 
-</script>		
+
+function validaterecatcha(flag)
+	{
+		return flag;
+	}
+	
+	
+console.log("global flag is " + flag);
+ // The last brackets execute the outer function
+
+	
+	
+	
+	
+	
+	</script>		
 
 
 
