@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<p>hello</p>
+<p id="myparagraph">hello</p>
 <script>
 //Start Preparing Token Client Side
 console.log( "ready!" );
@@ -32,7 +32,8 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Will not submit"  ); 
 		flag =   false;
-	
+		window.alert("flag is:" + flag);
+	        $("#myparagraph").html("this shoudl change now!");
 	 	}
 
 
