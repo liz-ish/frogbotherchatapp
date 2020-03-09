@@ -5,7 +5,7 @@
 <body>
 
 <p id="myparagraph">hello</p>
-	<form id="thisformshouldsubmit" onsubmit="return validateForm()" >
+	<form id="thisformshouldsubmit" onsubmit="return inner();" >
 	<input type="text">
 	<input type="submit" name"button" value="Mybutton">
 	</form>
@@ -14,7 +14,7 @@
 console.log( "ready!" );
 var flag = false;
 	
-function validateForm() {
+
 
 var inner = function(x) {console.log("FORM IS:" + x );
 			 $("#myparagraph").html(x);
@@ -61,7 +61,7 @@ console.log("Data Loaded:" + data);
 	
 
 //return inner.x;
-}
+
 	
 	
 	
