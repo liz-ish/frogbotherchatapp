@@ -15,16 +15,12 @@ console.log( "ready!" );
 var flag = false;
 	
 //Start Preparing Token Client Side
- 
-var inner = function(x) { console.log("FORM IS:" + x ); return x;}
+var getthevalue ;
+var inner = function(x) { console.log("FORM IS:" + x );
+			
+			$(form#thisformshouldsubmit).submit(false);}
 
- 
-$(document).on('submit','form#thisformshouldsubmit',function(inner){
-   window.alert(inner);;
-   
-});
-	
-	
+
 function validaterecatcha(x) {console.log("FORM " + x); return x;}
 //window.alert("This value will be sent to SUBMIT function" +  inner);
 // test 1
