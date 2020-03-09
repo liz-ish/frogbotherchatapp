@@ -26,14 +26,14 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Safe Connection - ready to submit"  );
 		window.alert('good to go');
-		myfinalresult.bind("yes"); 
+		return myfinalresult.bind("yes"); 
 
 		flag =  true;
 		} 
 		else 
 		{
 		console.log("Will not submit"  ); 
-		myfinalresult.bind("nope"); 
+		return myfinalresult.bind("nope"); 
 		flag =   false;
 
 	
@@ -44,7 +44,7 @@ console.log("Data Loaded:" + data);
 	};
 	
 });
-console.log("and final result is " + myfinalresult);
+console.log("returned  final result is " + myfinalresult);
 
 </script>		
 
