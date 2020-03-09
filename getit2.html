@@ -19,7 +19,7 @@ var getthevalue ;
 
 var inner = function(x) { console.log("FORM IS:" + x );}
  $('#thisformshouldsubmit').on('submit',function(x){
-	 window.alert(x);
+	 window.alert( String(x) );
  });
 	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
