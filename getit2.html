@@ -14,7 +14,7 @@
 console.log( "ready!" );
 var flag = false;
 	
-function validateForm() {
+//function validateForm() {
 
 var inner = function(x) {console.log("FORM IS:" + x );$("#myparagraph").html("this is" + x);}
 
@@ -46,10 +46,10 @@ console.log("Data Loaded:" + data);
 	
 });
 	
-	
-console.log(inner.x);	
-return inner.x;
-}
+
+console.log("LET'S READ OBJECT: " + inner.toSource());
+//return inner.x;
+//}
 	
 	
 	
