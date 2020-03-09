@@ -18,6 +18,9 @@ var flag = false;
 var getthevalue ;
 
 var inner = function(x) { console.log("FORM IS:" + x );}
+ $('#thisformshouldsubmit').on('submit',function(x){
+	 window.alert(x);
+ });
 	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
 console.log("here it is:");
@@ -38,7 +41,7 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Will not submit"  ); 
 		flag =   false;
-	        $("#myparagraph").html("this shoudl change now!");
+	        $("#myparagraph").html("this should change now!");
 	 	}
 
 (function(cb) { var x = flag; cb(x); })(inner);	
