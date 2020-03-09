@@ -12,7 +12,7 @@ console.log( "ready!" );
 
 
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
-	global myfinalresult = function(){
+	global flag;
 	
 		console.log("here it is:");
 console.log("Data Loaded:" + data);
@@ -26,16 +26,12 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Safe Connection - ready to submit"  );
 		window.alert('good to go');
-		return myfinalresult.bind("yes"); 
-
-		flag =  true;
+	flag =  true;
 		} 
 		else 
 		{
 		console.log("Will not submit"  ); 
-		return myfinalresult.bind("nope"); 
 		flag =   false;
-
 	
 	 	}
 
@@ -44,7 +40,7 @@ console.log("Data Loaded:" + data);
 	};
 	
 });
-console.log("global returned  final result is " + myfinalresult);
+console.log("global flag is " + flag);
 
 </script>		
 
