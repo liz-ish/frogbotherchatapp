@@ -5,12 +5,18 @@
 <body>
 
 <p id="myparagraph">hello</p>
+	<form id="thisformshouldsubmit" onsubmit= "return validaterecatcha();">
+	<input type="text">
+	<input type="button">
+	</form>
 <script>
 //Start Preparing Token Client Side
 console.log( "ready!" );
 
 
-var flag;
+var flag = false;
+	
+		
 	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
 	
@@ -39,7 +45,7 @@ console.log("Data Loaded:" + data);
 
 		
 	
-});
+},async:false);
 console.log("global flag is " + flag);
 
 </script>		
