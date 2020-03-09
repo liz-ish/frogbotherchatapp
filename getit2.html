@@ -5,7 +5,7 @@
 <body>
 
 <p id="myparagraph">hello</p>
-	<form id="thisformshouldsubmit" action="something.php" onsubmit="return validateForm()" >
+	<form id="thisformshouldsubmit" onsubmit="return validateForm()" >
 	<input type="text">
 	<input type="submit" name"button" value="Mybutton">
 	</form>
@@ -13,12 +13,10 @@
 	
 console.log( "ready!" );
 var flag = false;
-
 	
 function validateForm() {
 
-	
-	var inner = function(x) {console.log("FORM IS:" + x );$("#myparagraph").html("this is" + x);}
+var inner = function(x) {console.log("FORM IS:" + x );$("#myparagraph").html("this is" + x);}
 
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
 console.log("here it is:");
@@ -49,7 +47,7 @@ console.log("Data Loaded:" + data);
 });
 	
 	
-	
+console.log(inner.x);	
 return inner.x;
 }
 	
