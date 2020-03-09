@@ -21,13 +21,10 @@ var inner = function(x) {
 
 console.log("FORM IS:" + x );
 $("#myparagraph").html("this is" + x);
+$("#thisformshouldsubmit").attr("onsubmit","false");
 }
 
 
-$('#thisformshouldsubmit').on('submit',function(x){
-	 window.alert( String(x) );
- });
-	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
 console.log("here it is:");
 console.log("Data Loaded:" + data);
