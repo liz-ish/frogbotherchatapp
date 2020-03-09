@@ -1,1 +1,5 @@
-{ "success": "true", "score": "0.5","action": "submit"}
+{
+ "success": "true",
+ "score": "0.5",
+ "action": "submit"
+}
