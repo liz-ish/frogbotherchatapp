@@ -11,19 +11,24 @@
 	</form>
 <script>
 	
-	
-	console.log( "ready!" );
-        var flag = false;
-
-		
-		
+console.log( "ready!" );
+var flag = false;
 	
 //Start Preparing Token Client Side
 
-var inner = function(x) { console.log("x value is " + x); }
+var inner = function(x) { console.log("x value is " + x); return x;}
+window.alert("This value will be sent to SUBMIT function" +  inner);
 // test 1
 
+
+/*function validaterecatcha(flag)
+	{
+	return inner = function(x) { console.log("x value is " + x); }
+	}*/
 	
+	
+	
+
 	
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
 console.log("here it is:");
@@ -55,12 +60,6 @@ console.log("Data Loaded:" + data);
 console.log("global flag is " + flag);
 
 
-function validaterecatcha(flag)
-	{
-		return flag;
-	}
-	
-	
 console.log("global flag is " + flag);
  // The last brackets execute the outer function
 
