@@ -1,4 +1,8 @@
-var ABC;
-ABC = "THIS IS A TEST";
-Console.log("This is from the ABC file" + ABC );
-return ABC;
+<script>
+{
+  "success": true, 
+  "score": 0.5,
+  "action": "submit",
+
+}
+</script>
