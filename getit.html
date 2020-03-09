@@ -28,12 +28,12 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Safe Connection - ready to submit"  );
 		window.alert('good to go');
-	flag =  true;
+	this.flag =  true;
 		} 
 		else 
 		{
 		console.log("Will not submit"  ); 
-		flag =   false;
+		this.flag =   false;
 	        $("#myparagraph").html("this shoudl change now!");
 	 	}
 
@@ -41,7 +41,7 @@ console.log("Data Loaded:" + data);
 		
 	
 });
-console.log("global flag is " + flag);
+console.log("global flag is " + this.flag);
 
 </script>		
 
