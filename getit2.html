@@ -15,10 +15,12 @@ console.log( "ready!" );
 var flag = false;
 	
 //Start Preparing Token Client Side
+ 
+var inner = function(x) { console.log("FORM IS:" + x ); return x;}
 
-$(document).on('submit','form#thisformshouldsubmit',function(){
- var inner = function(x) { console.log("FORM IS:" + x ); return x;}
-   
+ 
+$(document).on('submit','form#thisformshouldsubmit',function(inner){
+   return inner;
    
 });
 	
