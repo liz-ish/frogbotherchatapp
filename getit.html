@@ -23,12 +23,15 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Safe Connection - ready to submit"  );
 		window.alert('good to go');
+		let finalresult = myfinalresult.bind("YES"); 
+
 		flag =  true;
 		} 
 		else 
 		{
 		console.log("Will not submit"  ); 
-	       console.log("This is " +  stringify(this));
+	       console.log("try to bind somthing " +  stringify(this));
+		let finalresult = myfinalresult.bind("NOPE"); 
 		flag =   false;
 
 	
@@ -37,7 +40,7 @@ console.log("Data Loaded:" + data);
 
 
 });
-
+console.log("and final result is " + finalresult);
 
 </script>		
 
