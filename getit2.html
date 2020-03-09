@@ -21,7 +21,8 @@ var inner = function(x) {
 
 console.log("FORM IS:" + x );
 $("#myparagraph").html("this is" + x);
-$("#thisformshouldsubmit").attr("onsubmit","false");
+//$("#thisformshouldsubmit").attr("onsubmit","false");
+	if (x == "false") {event.preventDefault();}
 }
 
 
