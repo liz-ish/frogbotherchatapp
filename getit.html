@@ -12,7 +12,7 @@ console.log( "ready!" );
 
 
 $.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
-	var myfinalresult = function(){
+	global var myfinalresult = function(){
 	
 		console.log("here it is:");
 console.log("Data Loaded:" + data);
@@ -44,7 +44,7 @@ console.log("Data Loaded:" + data);
 	};
 	
 });
-console.log("returned  final result is " + myfinalresult);
+console.log("global returned  final result is " + myfinalresult);
 
 </script>		
 
