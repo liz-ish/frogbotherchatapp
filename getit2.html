@@ -14,11 +14,20 @@
 console.log( "ready!" );
 var flag = false;
 	
-//function validateForm() {
+function validateForm() {
 
 var inner = function(x) {console.log("FORM IS:" + x );
 			 $("#myparagraph").html(x);
-			if ($("#myparagraph").html() == "donotsubmit"){window.alert("this is false");} else {window.alert("this is not false!");}
+			if ($("#myparagraph").html() == "donotsubmit")
+			{
+			window.alert("Form will not submit");
+			return false;
+			}
+			else {
+			window.alert("Form is ok to submit");
+			return true;
+				
+			}
 			}
 
 
@@ -52,7 +61,7 @@ console.log("Data Loaded:" + data);
 	
 
 //return inner.x;
-//}
+}
 	
 	
 	
