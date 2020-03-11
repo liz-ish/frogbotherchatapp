@@ -31,11 +31,11 @@ var inner = function(x) {console.log("FORM IS:" + x );
 			}
 
 
-$.get( "https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js", function( data ){
+$.get( "https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson", function( data ){
 console.log("here it is:");
 console.log("Data Loaded:" + data);
 
-	var text = data ;
+	/*var text = data ;
 		var obj = JSON.parse(text);
 		var resultsuccess = obj["success"];
 		var resultscore = obj["score"];
@@ -50,10 +50,10 @@ console.log("Data Loaded:" + data);
 		{
 		console.log("Will not submit"  ); 
 		flag =   "donotsubmit";
-	        
+	        */
 	 	}
 
-(function(cb) { var x = flag; cb(x); })(inner);	
+//(function(cb) { var x = flag; cb(x); })(inner);	
 
 		
 	
