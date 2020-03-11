@@ -20,9 +20,10 @@ $.ajax({
             console.error(xhr.responseText);
             },
             success: function (data, status, xhr) {
-                $xmlResponse = xhr.responseXML || xhr.responseText;
+		    console.log("data loaded" + data);
+                /*$xmlResponse = xhr.responseXML || xhr.responseText;
                 var results = JSON.parse($xmlResponse);
-		console.log("xml results" + results );
+		console.log("xml results" + results );*/
                 //var dataSet = transformData(results);
 		// console.log(dataSet);
                 //renderCityParkingLots(view, Graphic, itemID, dataSet, layer);
