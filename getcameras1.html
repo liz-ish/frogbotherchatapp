@@ -22,14 +22,14 @@ $.ajax({
             contentType: "text/plain",
             dataType: "text",
             error: function (xhr, status, error) {
-                console.error(xhr.responseText);
+            console.error(xhr.responseText);
             },
             success: function (data, status, xhr) {
                 $xmlResponse = xhr.responseXML || xhr.responseText;
                 var results = JSON.parse($xmlResponse);
 		console.log("xml results" + results );
                 //var dataSet = transformData(results);
-		 console.log(dataSet);
+		// console.log(dataSet);
                 //renderCityParkingLots(view, Graphic, itemID, dataSet, layer);
             }
         });
