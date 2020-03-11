@@ -15,7 +15,7 @@ $.ajax({
             url:"https://services1.arcgis.com/AVP60cs0Q9PEA8rH/arcgis/rest/services/City_Parking_Lots/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson",
             async: true,
             type: "GET",
-            dataType: "JSON",
+            dataType: "jsonp",
             error: function (xhr, status, error) {
             console.error(xhr.responseText);
             },
@@ -27,6 +27,7 @@ $.ajax({
 		// console.log(dataSet);
                 //renderCityParkingLots(view, Graphic, itemID, dataSet, layer);
             }
+	failed
         });
 
 
