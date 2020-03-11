@@ -4,18 +4,11 @@
 </head>
 <body>
 
-<p id="myparagraph">hello</p>
-	<form id="thisformshouldsubmit" onsubmit=loadmydata();" >
-	<input type="text">
-	<input type="submit" name"button" value="Mybutton">
-	</form>
 <script>
 	
 console.log( "ready!" );
 var flag = false;
 	
-
-
 var inner = function(x) {console.log("FORM IS:" + x );
 			 $("#myparagraph").html(x);
 			if ($("#myparagraph").html() == "donotsubmit")
@@ -29,12 +22,14 @@ var inner = function(x) {console.log("FORM IS:" + x );
 				
 			}
 			}
-function loadmydata() {
+
 							   
+$(document).ready(function(){
+					   
 				
 							   
 							   
-							   $.get( "https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson", function( data ){
+ $.get( "https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson", function( data ){
 console.log("here it is:");
 console.log("Data Loaded:" + data);
 
