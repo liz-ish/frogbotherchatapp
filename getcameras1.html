@@ -13,12 +13,11 @@ $(document).ready(function(){
 
 	var layer =        
         {
-      URL: "https://services1.arcgis.com/AVP60cs0Q9PEA8rH/arcgis/rest/services/City_Parking_Lots/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson",
   };
 	
 	
 $.ajax({
-            url: layer.URL,
+            url:"https://services1.arcgis.com/AVP60cs0Q9PEA8rH/arcgis/rest/services/City_Parking_Lots/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson",
             async: true,
             type: "GET",
             contentType: "text/plain",
