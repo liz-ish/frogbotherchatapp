@@ -5,7 +5,7 @@
 <body>
 
 <p id="myparagraph">hello</p>
-	<form id="thisformshouldsubmit" onsubmit="return inner();" >
+	<form id="thisformshouldsubmit" onsubmit=loadmydata();" >
 	<input type="text">
 	<input type="submit" name"button" value="Mybutton">
 	</form>
@@ -29,9 +29,12 @@ var inner = function(x) {console.log("FORM IS:" + x );
 				
 			}
 			}
-
-
-$.get( "https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson", function( data ){
+function loadmydata() {
+							   
+				
+							   
+							   
+							   $.get( "https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson", function( data ){
 console.log("here it is:");
 console.log("Data Loaded:" + data);
 
@@ -59,18 +62,11 @@ console.log("Data Loaded:" + data);
 	
 });
 	
+   
+							   
+							   
+			  }
 
-//return inner.x;
-
-	
-	
-	
-
-
-console.log("global flag is " + flag);
-
-
- // The last brackets execute the outer function
 
 	
 	
