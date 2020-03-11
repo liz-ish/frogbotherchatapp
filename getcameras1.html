@@ -15,19 +15,13 @@ $.ajax({
             url:"https://services1.arcgis.com/AVP60cs0Q9PEA8rH/arcgis/rest/services/City_Parking_Lots/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json",
             async: true,
             type: "GET",
-            dataType: "jsonp",
+            dataType: "json",
             error: function (xhr, status, error) {
-            console.error(xhr.responseText);
+            console.log("error is " + xhr.responseText);
             },
             success: function (data, status, xhr) {
 		    console.log("data loaded" + data);
-                /*$xmlResponse = xhr.responseXML || xhr.responseText;
-                var results = JSON.parse($xmlResponse);
-		console.log("xml results" + results );*/
-                //var dataSet = transformData(results);
-		// console.log(dataSet);
-                //renderCityParkingLots(view, Graphic, itemID, dataSet, layer);
-            }
+              }
 	
         });
 
