@@ -12,7 +12,7 @@
 $(document).ready(function(){
 console.log("ready!");	
 $.ajax({
-            url:"https://services1.arcgis.com/AVP60cs0Q9PEA8rH/arcgis/rest/services/City_Parking_Lots/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson",
+            url:"https://services1.arcgis.com/AVP60cs0Q9PEA8rH/arcgis/rest/services/City_Parking_Lots/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json",
             async: true,
             type: "GET",
             dataType: "jsonp",
