@@ -1,0 +1,147 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2016 Adobe Systems Incorporated
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+ <script>
+function generatesiteid(){ //Path to siteIds
+ var resultsideid = "";
+	 jQuery.ajax({
+     url: 'https://liz-ish.github.io/frogbotherchatapp/configsiteid.js',
+	 type: "GET",
+	 contentType: "text/plain",
+	 dataType: "text",
+	 success: function( data )
+	{
+
+		var text = data ;
+		var obj = JSON.parse(text);
+		var resultenvi = obj["envi"];
+		var resultsideid  = obj["sideid"];
+		(function(cb) { var xyz = resultsideid; cb(xyz); })(getsiteidvalue);
+}  ,
+		  async: false
+});
+return resultsideid;
+		
+}
+var getsiteidvalue = function(xyz) {
+googleurl = xyz;
+var myfinalurl = "https://www.google.com/recaptcha/api.js?render="+googleurl;
+$.getScript(myfinalurl, function() {
+			 grecaptcha.ready(function() {
+					grecaptcha.execute( googleurl , {action: 'securesubmit'}).then(function(token) {
+					$("input#g-recaptcha-response").val(token);
+					});		
+					
+				});
+			});
+		
+				
+		}
+  	
+  	
+</script> 
+
+<form  data-sly-use.container="com.adobe.cq.wcm.core.components.models.form.Container"
+      data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+      method="${container.method}" action="${currentPage.path}.forms.html" id="${container.id}" name="${container.name}"
+      enctype="${container.enctype}" class="cmp-form ${grid.cssClass}" data-pl-frm-vld="true" data-pl-frm-ctrl="true">
+<!-- START ReCAPTCHA elements-->
+<div style="visibility: hidden";> 
+<div class="form-group">
+<label for="recaptchav3validate">reCAPTCHA Validation failed<span  class="label-required">(required)</span></label> 
+<input id="recaptchav3validate" name="recaptchav3validate" type="text" aria-describedby="Validation failed" > 
+<input id="siteidconfig" name="siteidconfig" >
+</div>
+<input id="g-recaptcha-response" name="g-recaptcha-response" type="text" value="">
+</div>
+<!-- END ReCAPTCHA elements-->
+<input type="hidden" name=":formstart" value="${resource.path}"/>
+<input type="hidden" name="_charset_" value="utf-8"/>
+<input data-sly-test="${container.redirect}" type="hidden" id="validateredirect" name=":redirect" value="${container.redirect @ extension='html'}"/>
+<sly data-sly-repeat.paragraph="${grid.paragraphs}" data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}"></sly>
+<sly data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}" data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+         
+</form>
+	
+
+
+<div class="cui alert-small error" id="recaptchav3message" style="display:none;">
+reCaptcha verification failed - please refresh the page and try again.
+</div>
+
+<!-- reCAPTCHA validation starts -->
+
+<script>
+function connecttoservlet(){
+var returnedresult = false;
+// Path to Servlet with Secret Key			
+		
+		 jQuery.ajax({
+		        url: '/bin/calgary/recaptchav3',//https://liz-ish.github.io/frogbotherchatapp/returnmyobject.js
+		        type: "GET",
+	            contentType: "text/plain",
+	            dataType: "text",
+	            success: function( data )
+				{
+
+					var text = data ;
+					var obj = JSON.parse(text);
+					var resultsuccess = obj["success"];
+					var resultscore = obj["score"];
+					window.alert("success is " + resultsuccess + " and score is " +  obj["score"] );
+					if ( obj["success"] == "true" && parseFloat(resultscore) > 0.5)
+					{
+						
+						
+					flag = "success";
+					$("#recaptchav3validate").val("success");
+					returnedresult = true;
+
+					} 
+					else 
+					{
+					flag = "fail";
+					$("#recaptchav3message").css("display", "block");
+					returnedresult = false;
+
+
+				 	}
+					 
+					}			
+		        
+		        ,
+		        async: false
+		    });
+		 
+		 
+		return returnedresult;
+	
+	}
+	
+
+	
+	
+$( document ).ready(function() {
+generatesiteid();
+});
+	
+
+</script>
+		
+
+	
+
+	<!-- reCAPTCHA validation ends -->
+	
