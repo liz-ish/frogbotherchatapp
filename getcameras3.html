@@ -12,6 +12,7 @@ generatesiteid();
 	
 	
 function generatesiteid(){ //Path to siteIds
+window.alert("inside Gerenate function");
  var resultsiteid = "";
 	 jQuery.ajax({
 		 url: 'https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson',
