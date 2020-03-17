@@ -23,11 +23,12 @@ window.alert("inside Gerenate function");
 	 success: function( data )
 	{
     //window.alert("Data came back is:" + data);
-		$("div#databackis").text(data);
 
 		var text = data ;
 		var obj = JSON.parse(text);
 		//var resultsiteid  = obj["site-id"];
+		$("div#databackis").text( text["features"]);
+
 		(function(cb) { var xyz = resultsiteid; cb(xyz); })(getsiteidvalue);
 }  ,
 		  async: false
