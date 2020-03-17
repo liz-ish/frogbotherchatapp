@@ -1,0 +1,35 @@
+<script>
+
+function generatesiteid(){ //Path to siteIds
+ var resultsiteid = "";
+	 jQuery.ajax({
+		 url: 'https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson',
+		 type: "GET",
+		  contentType: "text/plain",
+          dataType: "text",
+	 success: function( data )
+	{
+
+		var text = data ;
+		var obj = JSON.parse(text);
+		//var resultsiteid  = obj["site-id"];
+    window.alert(text);
+		(function(cb) { var xyz = resultsiteid; cb(xyz); })(getsiteidvalue);
+}  ,
+		  async: false
+});
+return resultsiteid;
+		
+}
+
+var getsiteidvalue = function(xyz) {
+googleurl = xyz;
+window.alert(xyz);
+}
+
+    
+    
+</script>
+
+
+  	
