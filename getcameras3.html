@@ -12,6 +12,7 @@ generatesiteid();
 	
 	
 function generatesiteid(){ //Path to siteIds
+	
 window.alert("inside Gerenate function");
  var resultsiteid = "";
 	 jQuery.ajax({
@@ -21,11 +22,12 @@ window.alert("inside Gerenate function");
           dataType: "text",
 	 success: function( data )
 	{
+    //window.alert("Data came back is:" + data);
+		$("div#databackis").text(data);
 
 		var text = data ;
 		var obj = JSON.parse(text);
 		//var resultsiteid  = obj["site-id"];
-    window.alert(text);
 		(function(cb) { var xyz = resultsiteid; cb(xyz); })(getsiteidvalue);
 }  ,
 		  async: false
@@ -49,7 +51,7 @@ window.alert(xyz);
 </head>
 <body>	
 <H2>Get Cameras object</H2>
-
+	<div id="databackis"></div>
 	</body>
 </html>
 
