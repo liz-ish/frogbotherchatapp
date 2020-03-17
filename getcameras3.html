@@ -4,6 +4,7 @@
 <script  src="https://www.calgary.ca/Scripts/coc/parts/coc.parts.js"></script>	
 <script>
 var COC = COC || {};
+window.alert("COC is" + COC );
 COC.ESRIMapCityParkingLot = (function () {
     var init = function (view, Graphic, itemID) {
         var layer =        
@@ -15,10 +16,7 @@ COC.ESRIMapCityParkingLot = (function () {
         };
         getCityParkingLots(view, Graphic, itemID, layer);                
     };
-    var renderCityParkingLots = function (view, Graphic, itemID, dataSet, layer) {
-        COC.ESRIMap.renderMapGraphics(view, Graphic, itemID, dataSet, layer);
-        COC.ESRIMap.renderDataPanel(view, itemID, dataSet);        
-    };
+   
     var getCityParkingLots = function (view, Graphic, itemID, layer) {
         $.ajax({
             url: layer.URL,
@@ -32,8 +30,9 @@ COC.ESRIMapCityParkingLot = (function () {
             success: function (data, status, xhr) {
                 $xmlResponse = xhr.responseXML || xhr.responseText;
                 var results = JSON.parse($xmlResponse);
-                var dataSet = transformData(results);
-                renderCityParkingLots(view, Graphic, itemID, dataSet, layer);
+		    window.alert("results are" + results );
+               // var dataSet = transformData(results);
+                //renderCityParkingLots(view, Graphic, itemID, dataSet, layer);
             }
         });
     };
