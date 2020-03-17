@@ -15,46 +15,21 @@ function generatesiteid(){ //Path to siteIds
 
 		var text = data ;
 		var obj = JSON.parse(text);
-		
-		var L = obj.length;
-for (var i = 0; i < L; i++) {
-    var obj1 = obj[i];
-    for (var j in obj1) {
-        $("div#writeobject").text(j);
-    }
-}
-		
-		
-		
-		//var resultsiteid  = obj["site-id"];
-		//(function(cb) { var xyz = resultsiteid; cb(xyz); })(getsiteidvalue);
-}  ,
+		$("div#writeobject").text(obj);
+		}  ,
 		  async: false
 });
-return resultsiteid;
+//return resultsiteid;
 		
 }
-var getsiteidvalue = function(xyz) {
-googleurl = xyz;
-var myfinalurl = "https://www.google.com/recaptcha/api.js?render="+googleurl;
-$.getScript(myfinalurl, function() {
-			 grecaptcha.ready(function() {
-					grecaptcha.execute( googleurl , {action: 'securesubmit'}).then(function(token) {
-					$("input#g_recaptcha_response").val(token);
-					});		
-					
-				});
-			});
-		
-				
-		}
-  	
+ 	
   	
 </script> 
 	
 </head>
 <body>
-<script>	$( document ).ready(function() {
+<script>
+	$( document ).ready(function() {
 generatesiteid();
 });
 	</script>
