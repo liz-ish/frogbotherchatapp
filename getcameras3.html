@@ -12,10 +12,17 @@ function generatesiteid(){ //Path to siteIds
           dataType: "text",
 	 success: function( data )
 	{
+		
+		
 		$("div#writeobject").text( data );
-
-		var text = data ;
-		var obj = JSON.parse(text);
+		var myStr = data ;
+            var subStr = myStr.match("features(.*)");
+            alert(subStr[1]);
+		
+		
+		
+		//var text = data ;
+		//var obj = JSON.parse(text);
 		}  ,
 		  async: false
 });
