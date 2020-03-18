@@ -65,7 +65,6 @@ for (i = 0; i < dataSet.length; i++) {
 	AccordionBody = dataSet[i].Title;
 		 if(AccordionBody.indexOf(currentsearchterm) != -1){
 			
-		 count = count+1;
 		 /*<div class="row">
   <div class="col-sm-8">col-sm-8</div>
   <div class="col-sm-4">col-sm-4</div>
@@ -74,6 +73,7 @@ for (i = 0; i < dataSet.length; i++) {
 //$("div#writeobject").append("<div class='row'>");
 $("div#writeobject").append("<div class='col-sm-6'> Count is:" + count + " : " + AccordionBody + "</div>");		 
 if( count % 2 === 0  ){ $("div#writeobject").append("</div><div class='row'>");}
+ count = count+1;
 			 
 }
 	
