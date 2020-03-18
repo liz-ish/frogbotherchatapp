@@ -54,9 +54,9 @@ window.alert("3: Inside success");
         var IsPublic;
         var geometry;
         var record;
-        for (i = 0; i < cityParkingLots.length; i++) {
-            globalID = cityParkingLots.features[i].attributes.GLOBALID || "";
-            ID = cityParkingLots.features[i].attributes.OBJECTID || "";
+        for (i = 0; i < cityParkingLots.length; i++) { //[""0""].attributes.Description
+            globalID = cityParkingLots[i].attributes.GLOBALID || "";
+            ID = cityParkingLots[i].attributes.OBJECTID || "";
             ListType = cityParkingLots.features[i].attributes.ListType || "";
             Description = cityParkingLots.features[i].attributes.Description || "";
             Quadrant = cityParkingLots.features[i].attributes.Quadrant || "";
