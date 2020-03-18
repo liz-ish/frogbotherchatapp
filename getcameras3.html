@@ -37,6 +37,7 @@ function generatesiteid(){ //Path to siteIds
 		 var count = 0;
 		 var currentsearchterm = "";
 		 var headercount = 0;
+		
 		 //window.alert("5: Inside rendertrafficaccordion");
 		 //window.alert("inside rendertrafficaccordion ");
      	   // $("div#writeobject").text(dataSet);     
@@ -59,21 +60,22 @@ for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
 	<h3 class="title-bar">{{ Accordion title }}</h3>
 		{{ Accordion content }}*/
  $("div#writeobject").append("<h3 class='title-bar'>" + j + " : " + currentsearchterm + "</h3>" );
- $("div#writeobject").append("<div class='row'>");	
+ 	
 	
 for (i = 0; i < dataSet.length; i++) {
 	AccordionBody = dataSet[i].Title;
 		 if(AccordionBody.indexOf(currentsearchterm) != -1){
-			
+		$("div#writeobject").append("<div class='row'>");	
 		 /*<div class="row">
   <div class="col-sm-8">col-sm-8</div>
   <div class="col-sm-4">col-sm-4</div>
 </div>*/
     // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
 //$("div#writeobject").append("<div class='row'>");
-$("div#writeobject").append("<div class='col-sm-6'> Count is:" + count + " : " + AccordionBody + "</div>");		 
-if( count % 2 === 0  ){ $("div#writeobject").append("</div><div class='row'>");}
- count = count+1;
+$("div#writeobject").append("<div class='col-sm-6'> Count is:" + count + " : " + AccordionBody + "</div>");
+
+if( count % 2 === 0  ){ $("div#writeobject").append("</div>"); count = 0;}
+ 
 			 
 }
 	
