@@ -53,7 +53,7 @@ window.alert("3: Inside success");
         var IsPublic;
         var geometry;
         var record;
-        for (i = 0; i < cityParkingLots["features"].length; i++) {
+        for (i = 0; i < cityParkingLots.length; i++) {
             globalID = cityParkingLots.features[i].attributes.GLOBALID || "";
             ID = cityParkingLots.features[i].attributes.OBJECTID || "";
             ListType = cityParkingLots.features[i].attributes.ListType || "";
