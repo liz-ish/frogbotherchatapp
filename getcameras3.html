@@ -12,22 +12,11 @@ function generatesiteid(){ //Path to siteIds
           dataType: "text",
 	 success: function( data )
 	{
-		
-		
-	
-	//var myStr = data ;
-            //var subStr = myStr.match("features(.*)");
-        //   $("div#writeobject").text( subStr[1] );
-		
-		var value ="";
+
 		var text = data ;
 		var obj = JSON.parse(text);
-		 $("div#writeobject").text(obj['features'] );
-		/*Object.keys( obj ).forEach(function(key) {
-    var value = obj [key];
- $("div#writeobject").text(value );
-});*/
-		//window.alert("geometryType is" + obj["geometryType"]);
+	 var dataSet = transformData(results);
+	rendertrafficaccordion( dataSet);
 	
 		}  ,
 		  async: false
@@ -35,14 +24,104 @@ function generatesiteid(){ //Path to siteIds
 //return resultsiteid;
 		
 }
+	
+	 var rendertrafficaccordion = function (dataSet) {
+      $("div#writeobject").text(dataSet);    
+    };
+	
+	
  	
-  	
+   var transformData = function (cityParkingLots) {
+        var dataSet = [];
+        var i;
+        var globalID;
+        var ID;
+        var ListType;
+        var Description;
+        var Quadrant;
+        var Title;
+        var URL;
+        var IsPublic;
+        var geometry;
+        var record;
+        for (i = 0; i < cityParkingLots.features.length; i++) {
+            globalID = cityParkingLots.features[i].attributes.GLOBALID || "";
+            ID = cityParkingLots.features[i].attributes.OBJECTID || "";
+            ListType = cityParkingLots.features[i].attributes.ListType || "";
+            Description = cityParkingLots.features[i].attributes.Description || "";
+            Quadrant = cityParkingLots.features[i].attributes.Quadrant || "";
+            Title = cityParkingLots.features[i].attributes.Title || "";
+            URL = cityParkingLots.features[i].attributes.URL || "";
+            IsPublic = cityParkingLots.features[i].attributes.IsPublic || "";
+  
+            geometry = cityParkingLots.features[i].geometry;
+            record =
+            {
+                fields:
+                [
+		            {
+		                name: "globalID",
+		                label: "globalID",
+		                value: globalID,
+		                visible: false
+		            },
+		            {
+		                name: "ID",
+		                label: "ID",
+		                value: ID,
+		                visible: false
+		            },
+		            {
+		                name: "ListType",
+		                label: "ListType",
+		                value: ListType,
+		                visible: true
+		            },
+		            {
+		                name: "Description",
+		                label: "Description",
+		                value: Description,
+		                visible: true
+		            },
+		            {
+		                name: "Quadrant",
+		                label: "Quadrant",
+		                value: Quadrant,
+		                visible: true
+		            },
+		            {
+		                name: "Title",
+		                label: "Title",
+		                value: Title,
+		                visible: true
+		            },
+		            {
+		                name: "URL",
+		                label: "URL",
+		                value: URL,
+		                visible: true
+		            },
+		            {
+		                name: "IsPublic",
+		                label: "IsPublic",
+		                value: IsPublic,
+		                visible: true
+		            }
+                ],
+                geometry: geometry
+            };
+            dataSet.push(record);
+        }
+        return dataSet;
+    };
+	
+	
 </script> 
 	
 </head>
 <body>
 <script>
-	$( document ).ready(function() {
+$( document ).ready(function() {
 generatesiteid();
 });
 	</script>
