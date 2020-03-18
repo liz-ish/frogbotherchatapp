@@ -4,7 +4,7 @@
 <script  src="https://www.calgary.ca/Scripts/coc/parts/coc.parts.js"></script>	
 <script>
 function generatesiteid(){ //Path to siteIds
-window.alert("2: Generate Function");
+//window.alert("2: Generate Function");
 
  var resultsiteid = "";
 	 jQuery.ajax({
@@ -14,7 +14,7 @@ window.alert("2: Generate Function");
           dataType: "text",
 	 success: function( data )
 	{
-window.alert("3: Inside success");
+//window.alert("3: Inside success");
 
 		var text = data ;
 		var obj = JSON.parse(text);
@@ -29,13 +29,21 @@ window.alert("3: Inside success");
 }
 	
 	 var rendertrafficaccordion = function (dataSet) {
-		 var accodrionresults ="";
-		 window.alert("5: Inside rendertrafficaccordion");
-		 window.alert("inside rendertrafficaccordion ");
+		 var AccordionBody ="";
+		 var AccordionHeader = "";
+		 //window.alert("5: Inside rendertrafficaccordion");
+		 //window.alert("inside rendertrafficaccordion ");
      	   // $("div#writeobject").text(dataSet);     
+		 AccordionHeader = "16 Avenue";
  for (i = 0; i < dataSet.length; i++) {
-	 accodrionresults = dataSet[i].Title;
-	 $("div#writeobject").append("<h2>" + accodrionresults + "</h2><br>");     
+	 AccordionBody = dataSet[i].Title;
+	 
+	 if(AccordionBody.indexOf(AccordionHeader) != -1){
+		 
+     $("div#writeobject").append("<h1>" + AccordionHeader + "</h1><br> + <h2>" +  AccordionBody  +"</h2>); 
+}
+	 
+	 //$("div#writeobject").append("<h2>" + accodrionresults + "</h2><br>");     
 
  }
 		 //$("div#writeobject").text(dataSet);    
@@ -44,7 +52,7 @@ window.alert("3: Inside success");
 	
  	
    var transformData = function (cityParkingLots) {
-	   window.alert("4: Inside transformData");
+	  // window.alert("4: Inside transformData");
 	   // $("div#writeobject").text(Object.keys(cityParkingLots));     
 
 
@@ -140,7 +148,7 @@ window.alert("3: Inside success");
 <body>
 <script>
 $( document ).ready(function() {
-	window.alert("1: inside doc ready");
+	//window.alert("1: inside doc ready");
 generatesiteid();
 });
 	</script>
