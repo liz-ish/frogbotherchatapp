@@ -66,9 +66,9 @@ window.alert("3: Inside success");
             IsPublic = cityParkingLots[i].attributes.IsPublic || "";
   
             geometry = cityParkingLots[i].attributes.geometry;
-            record =
+            record = [
             {
-                fields:
+                /*fields:
                 [
 		            {
 		                name: "globalID",
@@ -118,8 +118,10 @@ window.alert("3: Inside success");
 		                value: IsPublic,
 		                visible: true
 		            }
-                ],
-                geometry: geometry
+                ]*/
+		   "Description": Description } ]
+		    ,
+                //geometry: geometry
             };
             dataSet.push(record);
         }
