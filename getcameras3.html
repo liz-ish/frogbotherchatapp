@@ -57,14 +57,14 @@ window.alert("3: Inside success");
         for (i = 0; i < cityParkingLots.length; i++) { //[""0""].attributes.Description
             globalID = cityParkingLots[i].attributes.GLOBALID || "";
             ID = cityParkingLots[i].attributes.OBJECTID || "";
-            ListType = cityParkingLots.features[i].attributes.ListType || "";
-            Description = cityParkingLots.features[i].attributes.Description || "";
-            Quadrant = cityParkingLots.features[i].attributes.Quadrant || "";
-            Title = cityParkingLots.features[i].attributes.Title || "";
-            URL = cityParkingLots.features[i].attributes.URL || "";
-            IsPublic = cityParkingLots.features[i].attributes.IsPublic || "";
+            ListType = cityParkingLots[i].attributes.ListType || "";
+            Description = cityParkingLots[i].attributes.Description || "";
+            Quadrant = cityParkingLots[i].attributes.Quadrant || "";
+            Title = cityParkingLots[i].attributes.Title || "";
+            URL = cityParkingLots[i].attributes.URL || "";
+            IsPublic = cityParkingLots[i].attributes.IsPublic || "";
   
-            geometry = cityParkingLots.features[i].geometry;
+            geometry = cityParkingLots[i].attributes.geometry;
             record =
             {
                 fields:
