@@ -29,10 +29,15 @@ window.alert("3: Inside success");
 }
 	
 	 var rendertrafficaccordion = function (dataSet) {
+		 var accodrionresults ="";
 		 window.alert("5: Inside rendertrafficaccordion");
 		 window.alert("inside rendertrafficaccordion ");
-     	    $("div#writeobject").text(dataSet);     
+     	   // $("div#writeobject").text(dataSet);     
+ for (i = 0; i < dataSet.length; i++) {
+	 accodrionresults = dataSet[i].title.
+	 $("div#writeobject").text(accodrionresults);     
 
+ }
 		 //$("div#writeobject").text(dataSet);    
     };
 	
