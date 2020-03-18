@@ -37,6 +37,7 @@ function generatesiteid(){ //Path to siteIds
 		 var count = 0;
 		 var currentsearchterm = "";
 		 var headercount = 0;
+		 var colcount = 0;
 		
 		 //window.alert("5: Inside rendertrafficaccordion");
 		 //window.alert("inside rendertrafficaccordion ");
@@ -65,15 +66,14 @@ for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
 for (i = 0; i < dataSet.length; i++) {
 	AccordionBody = dataSet[i].Title;
 	if(AccordionBody.indexOf(currentsearchterm) != -1){
-		
+	colcount = colcount + 1;	
     // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
 //$("div#writeobject").append("<div class='row'>");
 $("div#writeobject").append("<div class='col-sm-6'> Count is:" + count + " : " + AccordionBody + "</div>");
-if( (count % 2 ) === 0  ){ $("div#writeobject").append("</div>"); }
+if ( (colcount % 2 ) === 0  ){ $("div#writeobject").append("</div>"); }
 			 
 }
 	
-count = count+1;
 }
 
 
