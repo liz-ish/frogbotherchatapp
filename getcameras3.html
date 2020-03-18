@@ -50,13 +50,30 @@ function generatesiteid(){ //Path to siteIds
 for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
 	
   currentsearchterm = AccordionHeaderObject.AccordionHeader[j];
- $("div#writeobject").append("<h2 style='color:red'>" + j + " : " +currentsearchterm + "</h2><br>" );
+	
+	/*<h3 class="title-bar">{{ Accordion title }}</h3>
+	<!-- The accordion content can be anything. -->
+		{{ Accordion content }}
+
+	<!-- Repeat as necessary -->
+	<h3 class="title-bar">{{ Accordion title }}</h3>
+		{{ Accordion content }}*/
+ $("div#writeobject").append("<h3 class='title-bar'>" + j + " : " +currentsearchterm + "</h3>" );
+	$("div#writeobject").append("<div class='row'>");
+	
 for (i = 0; i < dataSet.length; i++) {
 	AccordionBody = dataSet[i].Title;
 		 if(AccordionBody.indexOf(currentsearchterm) != -1){
 		 count = count+1;
-		 
-     $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>"); 
+		 /*<div class="row">
+  <div class="col-sm-8">col-sm-8</div>
+  <div class="col-sm-4">col-sm-4</div>
+</div>*/
+    // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
+//$("div#writeobject").append("<div class='row'>");
+$("div#writeobject").append("<div class='col-sm-6'>AccordionBody</div>");		 
+if((count % 2) === 0){ $("div#writeobject").append("</div>");}
+			 
 }
 	
 
@@ -212,7 +229,14 @@ generatesiteid();
 
 
 	
-	<div id="writeobject"></div>
+	<div id="writeobject1"></div>
+	
+	<div class="cui accordion {{ acc-wrap }} {{ default-expanded }}" id="writeobject" >
+	<!-- The accordion title can be any heading element as long as it has the class `title-bar` -->
+	
+</div>
+	
+	
 	</body>
 </html>
 
