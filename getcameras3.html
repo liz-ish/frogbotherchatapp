@@ -4,6 +4,8 @@
 <script  src="https://www.calgary.ca/Scripts/coc/parts/coc.parts.js"></script>	
 <script>
 function generatesiteid(){ //Path to siteIds
+window.alert("2: Generate Function");
+
  var resultsiteid = "";
 	 jQuery.ajax({
 	 url: 'https://services1.arcgis.com/AVP60cs0Q9PEA8rH/ArcGIS/rest/services/TrafficCameras_Public/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=pjson',
@@ -12,6 +14,7 @@ function generatesiteid(){ //Path to siteIds
           dataType: "text",
 	 success: function( data )
 	{
+window.alert("3: Inside success");
 
 		var text = data ;
 		var obj = JSON.parse(text);
@@ -26,6 +29,8 @@ function generatesiteid(){ //Path to siteIds
 }
 	
 	 var rendertrafficaccordion = function (dataSet) {
+		 window.alert("5: Inside rendertrafficaccordion");
+		 window.alert("inside rendertrafficaccordion ");
      
 		 $("div#writeobject").html("<h2>Reading from rendertrafficaccordion: <h2><br>"); 
 		 $("div#writeobject").text(dataSet);    
@@ -34,6 +39,8 @@ function generatesiteid(){ //Path to siteIds
 	
  	
    var transformData = function (cityParkingLots) {
+	   window.alert("4: Inside transformData");
+
         var dataSet = [];
         var i;
         var globalID;
@@ -124,6 +131,7 @@ function generatesiteid(){ //Path to siteIds
 <body>
 <script>
 $( document ).ready(function() {
+	window.alert("1: inside doc ready");
 generatesiteid();
 });
 	</script>
