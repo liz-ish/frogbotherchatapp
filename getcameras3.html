@@ -15,14 +15,22 @@ function generatesiteid(){ //Path to siteIds
 		
 		
 	
-	var myStr = data ;
-            var subStr = myStr.match("features(.*)");
-           $("div#writeobject").text( subStr[1] );
+	//var myStr = data ;
+            //var subStr = myStr.match("features(.*)");
+        //   $("div#writeobject").text( subStr[1] );
 		
-		
+		var value ="";
 		var text = data ;
 		var obj = JSON.parse(text);
-		window.alert("geometryType is" + obj["geometryType"]);
+		//window.alert("geometryType is" + obj["geometryType"]);
+		
+		Object.keys(obj).forEach(function(key) {
+                 //var value += obj[key] . "<br>";
+		 $("div#writeobject").html(obj[key] );
+    // ...
+});
+		
+		
 		
 		}  ,
 		  async: false
