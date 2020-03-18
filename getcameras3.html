@@ -29,18 +29,22 @@ function generatesiteid(){ //Path to siteIds
 }
 	
 	 var rendertrafficaccordion = function (dataSet) {
+		var i= "";
 		 var AccordionBody ="";
 		 var AccordionHeader = "";
+		 var count = 0;
 		 //window.alert("5: Inside rendertrafficaccordion");
 		 //window.alert("inside rendertrafficaccordion ");
      	   // $("div#writeobject").text(dataSet);     
 		 AccordionHeader = "16 Avenue";
+		 $("div#writeobject").append("<h2>" + AccordionHeader + "</h2><br>" );
  for (i = 0; i < dataSet.length; i++) {
 	 AccordionBody = dataSet[i].Title;
 	 
 	 if(AccordionBody.indexOf(AccordionHeader) != -1){
+		 count = count+1;
 		 
-     $("div#writeobject").append("<h1>" + AccordionHeader + "</h1><br> + <h2>" +  AccordionBody  +"</h2>"); 
+     $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>"); 
 }
 	 
 	 //$("div#writeobject").append("<h2>" + accodrionresults + "</h2><br>");     
