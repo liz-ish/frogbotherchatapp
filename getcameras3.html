@@ -18,7 +18,7 @@ window.alert("3: Inside success");
 
 		var text = data ;
 		var obj = JSON.parse(text);
-	 var dataSet = transformData(obj);
+	 var dataSet = transformData(obj["features"]);
 	rendertrafficaccordion( dataSet);
 	
 		}  ,
@@ -32,7 +32,6 @@ window.alert("3: Inside success");
 		 window.alert("5: Inside rendertrafficaccordion");
 		 window.alert("inside rendertrafficaccordion ");
      
-		 $("div#writeobject").html("<h2>Reading from rendertrafficaccordion: <h2><br>"); 
 		 //$("div#writeobject").text(dataSet);    
     };
 	
@@ -40,7 +39,7 @@ window.alert("3: Inside success");
  	
    var transformData = function (cityParkingLots) {
 	   window.alert("4: Inside transformData");
-	    $("div#writeobject").text(Object.keys(cityParkingLots.features));     
+	    $("div#writeobject").text(Object.keys(cityParkingLots));     
 
 
         var dataSet = [];
