@@ -70,9 +70,15 @@ for (i = 0; i < dataSet.length; i++) {
     // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
 //$("div#writeobject").append("<div class='row'>");
 $("div#writeobject").append("<div class='col-sm-6'> colcount is:" + colcount + " : " + AccordionBody + "</div>");
-if ( colcount  == 2  ){
+ var next = i+1;
+    if (next%2==0 && next!=dataSet.length) {
+      html += "</div><div class='row'>";
+    }
+		
+		
+		/*if ( colcount  == 2  ){
 	$("div#writeobject").append("</div>");
-}
+}*/
 			 
 }
 	
