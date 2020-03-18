@@ -29,27 +29,74 @@ function generatesiteid(){ //Path to siteIds
 }
 	
 	 var rendertrafficaccordion = function (dataSet) {
-		var i= "";
+		var j= "";
+		 var i="";
 		 var AccordionBody ="";
 		 var AccordionHeader = "";
+		 var AccordionHeaderObject ="";
 		 var count = 0;
+		 var currentsearchterm = "";
+		 var headercount = 0;
 		 //window.alert("5: Inside rendertrafficaccordion");
 		 //window.alert("inside rendertrafficaccordion ");
      	   // $("div#writeobject").text(dataSet);     
-		 AccordionHeader = "16 Avenue";
-		 $("div#writeobject").append("<h2>" + AccordionHeader + "</h2><br>" );
- for (i = 0; i < dataSet.length; i++) {
-	 AccordionBody = dataSet[i].Title;
-	 
-	 if(AccordionBody.indexOf(AccordionHeader) != -1){
+		 //AccordionHeader = ",";
+		
+		 AccordionHeaderObject = { "AccordionHeader":[ "16 Avenue", "Bow Trail", "Crowchild Trail" ]};
+
+for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
+	
+  currentsearchterm = AccordionHeaderObject.AccordionHeader[j];
+ $("div#writeobject").append("<h2 style='color:red'>" + j + " : " +currentsearchterm + "</h2><br>" );
+for (i = 0; i < dataSet.length; i++) {
+	AccordionBody = dataSet[i].Title;
+		 if(AccordionBody.indexOf(currentsearchterm) != -1){
 		 count = count+1;
 		 
      $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>"); 
 }
+	
+
+}
+
+
+}
+		 
+		 
+		 
+		 /*
+		 
+		 var myObj, i, x = "";
+myObj = {
+  "MainHeaders":[ "Ford", "BMW", "Fiat" ]
+};
+
+for (i = 0; i < myObj.MainHeaders.length; i++) {
+  x += myObj.MainHeaders[i] + "<br>";
+}
+
+*/
+		 /*
+		 myObj = {"name":"John", "age":30, "car":null};
+for (x in myObj) {
+  document.getElementById("demo").innerHTML += myObj[x] + "<br>";
+}
+
+
+*/
+		// $("div#writeobject").append("<h2>" + AccordionHeader + "</h2><br>" );
+// for (i = 0; i < dataSet.length; i++) {
+	 //AccordionBody = dataSet[i].Title;
+	 
+	// if(AccordionBody.indexOf(AccordionHeader) != -1){
+		// count = count+1;
+		 
+    // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>"); 
+//}
 	 
 	 //$("div#writeobject").append("<h2>" + accodrionresults + "</h2><br>");     
 
- }
+// }
 		 //$("div#writeobject").text(dataSet);    
     };
 	
