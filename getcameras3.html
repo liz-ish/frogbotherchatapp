@@ -18,8 +18,7 @@ window.alert("3: Inside success");
 
 		var text = data ;
 		var obj = JSON.parse(text);
-		var accordionobject[]  = obj["features"];
-	       var dataSet = transformData(accordionobject);
+	       var dataSet = transformData(obj.features);
 	       rendertrafficaccordion( dataSet);
 	
 		}  ,
