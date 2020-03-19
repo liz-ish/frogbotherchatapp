@@ -38,7 +38,7 @@ function generatesiteid(){ //Path to siteIds
 		 var currentsearchterm = "";
 		 var headercount = 0;
 		 var internaldiv="";
-		
+		var imgurl = "";
 		 //window.alert("5: Inside rendertrafficaccordion");
 		 //window.alert("inside rendertrafficaccordion ");
      	   // $("div#writeobject").text(dataSet);     
@@ -64,13 +64,13 @@ for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
 var colcount = 0;
 for (i = 0; i < dataSet.length; i++) {
 	AccordionBody = dataSet[i].Title;
-
+imgurl = dataSet[i].URL;
 	if(AccordionBody.indexOf(currentsearchterm) != -1){
 	colcount = colcount + 1;
 		if (colcount == 1) {internaldiv = "<div class='row'>";}
 // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
 //$("div#writeobject").append("<div class='row'>");
-internaldiv += "<div class='col-sm-6'> colcount is:" + colcount + " : " + AccordionBody + "</div>";
+internaldiv += "<div class='col-sm-6'> <img src= '" + imgurl + "' ><br> " + AccordionBody + " </div>";
 	  if (colcount%2==0) {  internaldiv += "</div><div class='row'>";  }
 		
 //$("div#writeobject").append("<div class='col-sm-6'> colcount is:" + colcount + " : " + AccordionBody + "</div>");
