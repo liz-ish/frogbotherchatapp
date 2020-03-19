@@ -81,7 +81,16 @@
   }
 }
 </style>
+	<script>
+$("#Traffic_Cam_Accordion_Object").find('img').click(function(){
+$("#Traffic_Cam_Modal").css("display","block");
+$("#modal_image_content").attr("src",this.src);
+$("#Traffic_Cam_Mpdal_Caption").html(this.alt);
+});
+$("span#Traffic_Cam_Modal_Close").click(function(){ $("#Traffic_Cam_Modal").css("display","none");
+});
 	
+	</script>
 <script>
 function generatesiteid(){ //Path to siteIds
 //window.alert("2: Generate Function");
@@ -331,16 +340,7 @@ generatesiteid();
 <div id="Traffic_Cam_caption"></div>
 </div>
 
-<script>
-//jQuery(this).find("img")
-$("#Traffic_Cam_Accordion_Object").find('img').click(function(){
-$("#Traffic_Cam_Modal").css("display","block");
-$("#modal_image_content").attr("src",this.src);
-$("#Traffic_Cam_Mpdal_Caption").html(this.alt);
-});
-$("span#Traffic_Cam_Modal_Close").click(function(){ $("#Traffic_Cam_Modal").css("display","none");
-});
-  </script>
+
 	
 	
 	</body>
