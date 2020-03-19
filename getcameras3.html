@@ -60,7 +60,7 @@ for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
 	<!-- Repeat as necessary -->
 	<h3 class="title-bar">{{ Accordion title }}</h3>
 		{{ Accordion content }}*/
- $("div#writeobject").append("<h3 class='title-bar'>" + j + " : " + currentsearchterm + "</h3>" );
+ $("div#writeobject").append("<h3 class='title-bar'>" + j + " : " + currentsearchterm + "</h3><div class='row'>" );
 var colcount = 0;
 for (i = 0; i < dataSet.length; i++) {
 	AccordionBody = dataSet[i].Title;
@@ -70,7 +70,7 @@ for (i = 0; i < dataSet.length; i++) {
 // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
 //$("div#writeobject").append("<div class='row'>");
 internaldiv += "<div class='col-sm-6'> colcount is:" + colcount + " : " + AccordionBody + "</div>";
-	  if (colcount%2==0) {  internaldiv += "<HR>";  }
+	  if (colcount%2==0) {  internaldiv += "</div><HR><div class='row'>";  }
 		
 //$("div#writeobject").append("<div class='col-sm-6'> colcount is:" + colcount + " : " + AccordionBody + "</div>");
  
