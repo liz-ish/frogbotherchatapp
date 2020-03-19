@@ -39,6 +39,8 @@ function generatesiteid(){ //Path to siteIds
 		 var headercount = 0;
 		 var internaldiv="";
 		var imgurl = "";
+		var urlRegEx = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-]*)?\??(?:[\-\+=&;%@\.\w]*)#?(?:[\.\!\/\\\w]*))?)/g;
+var CameraPath;
 		 //window.alert("5: Inside rendertrafficaccordion");
 		 //window.alert("inside rendertrafficaccordion ");
      	   // $("div#writeobject").text(dataSet);     
@@ -66,13 +68,9 @@ for (i = 0; i < dataSet.length; i++) {
 AccordionBody = dataSet[i].Title;
 
 	imgurl = dataSet[i].URL;
-	
-	var sumbittedUrls = imgurl;
+CameraPath = imgurl.match(urlRegEx);
 
-var myStr = "The quick brown fox jumps over the lazy dog.";
-            var subStr = sumbittedUrls.match("<a href=(.*).jpg");
-	
-	
+ 	
 	
 /*
 	var sumbittedUrls ="test.com http://another.us/one/1/three/four/five/six";
@@ -89,7 +87,7 @@ console.log(urls);
 		if (colcount == 1) {internaldiv = "<div class='row'>";}
 // $("div#writeobject").append("<p>" + count + ":"+  AccordionBody  +"</p><br>");
 //$("div#writeobject").append("<div class='row'>");
-internaldiv += "<div class='col-sm-6'> " + subStr +  AccordionBody + " </div>";
+internaldiv += "<div class='col-sm-6'><img src=' " + CameraPath + " ' ><br> " +   AccordionBody + " </div>";
 	  if (colcount%2==0) {  internaldiv += "</div><div class='row'>";  }
 		
 //$("div#writeobject").append("<div class='col-sm-6'> colcount is:" + colcount + " : " + AccordionBody + "</div>");
