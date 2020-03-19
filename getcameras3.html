@@ -2,6 +2,86 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script  src="https://www.calgary.ca/Scripts/coc/parts/coc.parts.js"></script>	
+<style>
+/* The Modal (background) */
+.Traffic_Cam_Modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.Traffic_Cam_Modal_Content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#Traffic_Cam_Mpdal_Caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.Traffic_Cam_Modal-Content, #Traffic_Cam_Mpdal_Caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.Traffic_Cam_Modal_Close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.Traffic_Cam_Modal_Close:hover,
+.Traffic_Cam_Modal_Close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .Traffic_Cam_Modal_Content {
+    width: 100%;
+  }
+}
+</style>
+	
 <script>
 function generatesiteid(){ //Path to siteIds
 //window.alert("2: Generate Function");
@@ -62,7 +142,7 @@ for (j = 0; j < AccordionHeaderObject.AccordionHeader.length; j++) {
 	<!-- Repeat as necessary -->
 	<h3 class="title-bar">{{ Accordion title }}</h3>
 		{{ Accordion content }}*/
- $("div#writeobject").append("<h3 class='title-bar'> <a><b>" + j + " : " + currentsearchterm + "</b></a></h3>" );
+ $("div#Traffic_Cam_Accordion_Object").append("<h3 class='title-bar'> <a><b>" + j + " : " + currentsearchterm + "</b></a></h3>" );
 var colcount = 0;
 for (i = 0; i < dataSet.length; i++) {
 AccordionBody = dataSet[i].Title;
@@ -88,7 +168,7 @@ internaldiv += "<div class='col-sm-6'><span><img src='" + CameraPath + "' alt= '
 }
 	//tr:nth-child(2)
 	
-	$("div#writeobject").append(internaldiv);
+	$("div#Traffic_Cam_Accordion_Object").append(internaldiv);
 
 
 }
@@ -238,14 +318,35 @@ generatesiteid();
 	
 <H2>Get Cameras object</H2>
 
-
-	
-	<div id="writeobject1"></div>
-	
-	<div class="cui accordion {{ acc-wrap }} {{ default-expanded }}" id="writeobject" >
-	<!-- The accordion title can be any heading element as long as it has the class `title-bar` -->
-	
+<div id="writeobject1"></div>
+<div class="cui accordion {{ acc-wrap }} {{ default-expanded }}" id="Traffic_Cam_Accordion_Object" >
+<!-- The accordion title can be any heading element as long as it has the class `title-bar` -->
 </div>
+	
+<!-- The Modal -->
+	
+<div id="Traffic_Cam_Modal" class="Traffic_Cam_Modal">
+<span class="Traffic_Cam_close">&times;</span>
+<img class="Traffic_Cam_Modal_Content" id="Traffic_Cam_img01">
+<div id="Traffic_Cam_caption"></div>
+</div>
+
+<div id="Traffic_Cam_Modal" class="Traffic_Cam_Modal">
+  <span class="Traffic_Cam_Modal_Close" id="Traffic_Cam_Modal_Close">&times;</span>
+  <img class="Traffic_Cam_Modal_Content" id="modal_image_content">
+  <div id="Traffic_Cam_Mpdal_Caption"></div>
+</div>
+
+<script>
+
+$("#Traffic_Cam_Accordion_Object").children('img').click(function(){
+$("#Traffic_Cam_Modal").css("display","block");
+$("#modal_image_content").attr("src",this.src);
+$("#Traffic_Cam_Mpdal_Caption").html(this.alt);
+});
+$("span#Traffic_Cam_Modal_Close").click(function(){ $("#Traffic_Cam_Modal").css("display","none");
+});
+  </script>
 	
 	
 	</body>
