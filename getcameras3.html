@@ -91,6 +91,30 @@ $("span#Traffic_Cam_Modal_Close").click(function(){ $("#Traffic_Cam_Modal").css(
 });
 	
 	</script>
+	 <script>
+function getDocHeight(doc) {
+    doc = doc || document;
+    var body = doc.body, html = doc.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight, 
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+window.alert("Child's content height: "+height);
+    return height;
+}
+
+// send docHeight onload
+function sendDocHeightMsg(e) {
+    var ht = getDocHeight();
+    console.log(JSON.stringify( {'docHeight': ht} ));
+    parent.postMessage( JSON.stringify( {'docHeight': ht} ), '*' );
+}
+
+// assign onload handler 
+if ( window.addEventListener ) {
+    window.addEventListener('load', sendDocHeightMsg, false);
+} else if ( window.attachEvent ) { // ie8
+    window.attachEvent('onload', sendDocHeightMsg);
+}
+</script>
 <script>
 function generatesiteid(){ //Path to siteIds
 //window.alert("2: Generate Function");
