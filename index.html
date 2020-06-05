@@ -19,12 +19,14 @@ function getDocHeight(doc) {
     var height = Math.max( body.scrollHeight, body.offsetHeight, 
         html.clientHeight, html.scrollHeight, html.offsetHeight );
 window.alert("Child's content height: "+height);
+    console.log("Child's content height: "+height");
     return height;
 }
 
 // send docHeight onload
 function sendDocHeightMsg(e) {
     var ht = getDocHeight();
+        console.log( JSON.stringify( {'docHeight': ht} ));
     parent.postMessage( JSON.stringify( {'docHeight': ht} ), '*' );
 }
 
