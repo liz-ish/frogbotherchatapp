@@ -19,7 +19,7 @@ function getDocHeight(doc) {
     var height = Math.max( body.scrollHeight, body.offsetHeight, 
         html.clientHeight, html.scrollHeight, html.offsetHeight );
 window.alert("Child's content height: "+height);
-    console.log("Child's content height: "+height");
+    console.log(JSON.stringify( {'docHeight': ht} ));
     return height;
 }
 
