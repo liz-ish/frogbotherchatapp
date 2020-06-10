@@ -1,93 +1,346 @@
-<html>
-<body>
+<!DOCTYPE html>
+
+
+<!--[if lt IE 7]>      <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8" lang="en"> <![endif]-->
+
+<html lang="en"> 
+
+<head id="Head1"><meta name="DC.Creator" content="Council" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=yes" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css" />
+
+    <!--Load Boostrap 3 Custom SCSS for Pattern Library--> 
+    <link href="/_layouts/CoCIS/Applications/PatternLibrary/css/3.3.5_grid_only/bootstrap.min.css" rel="stylesheet" media="all" />
+
+    <!--Load COC icon stylesheet -->
+    <link href="/_layouts/CoCIS/Applications/Councillors/css/font-awesome/style.css" rel="stylesheet" type="text/css" />
+        
+    <!--Load core Pattern Library Styles *DO NOT MODIFY* -->     
+    <link rel="stylesheet" type="text/css" href="/_layouts/CoCIS/Applications/Councillors/css/COC.Pattern.Library.css" /><link href="/_layouts/CoCIS/Applications/Councillors/css/coc-wrapper-styles.css" rel="stylesheet" type="text/css" /><link href="/_layouts/CoCIS/Applications/Councillors/css/coc-styles-form.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="/_layouts/CoCIS/Applications/Councillors/css/COC.Pattern.Library.css" />
+
+    <!--Developer: Load web application wrapper stylesheet--> 
+    <link href="/_layouts/CoCIS/Applications/PatternLibrary/css/coc-wrapper-styles.min.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/_layouts/CoCIS/Applications/PatternLibrary/js/modernizr.custom.js"></script>
+
+    <title>
+	The City of Calgary - Stay Connected
+</title>        
+
+    <!-- JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.calgary.ca/Style%20Library/cocis/js/constants.js"></script>
+    <script type="text/javascript" src="/_layouts/CoCIS/Applications/AutoSuggest/DataContracts.js"></script>     
+    <script type="text/javascript" src="/_layouts/CoCIS/Applications/AutoSuggest/jquery.json-2.2.js"></script>
+    <script type="text/javascript" src="/_layouts/CoCIS/Applications/AutoSuggest/AddressAutoSuggest.js"></script>
+    <script type="text/javascript" src="/_layouts/cocis/Applications/TaxForms/TaxForms.js?v=1.0.0"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    
+    
+<link href="/WebResource.axd?d=Skb1M0ioOkpyAt4z_k-QIaDRMyL4x_LhlTw8wMqP5ynai4EK4huVqAJmJONowaCvS8mOfOF3It60MxnACBCGyqMZdKO4NmGtPCUCeNySkUF-XRZwn8KbyqBULaQW1ombZ6ZwIGt5BEnk13NR14zHdhsriWcRuY0gmjNyLd1ZweldTWlp0&amp;t=636469471891026698" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+
+<body class="coc-wrapper">
+   
+
+    <!-- The main div -->
+    <main>
+        <div class="container-fluid">
+      
+      	    <h1 id="Header2" class="cocis-content-page-title app-title visible-xs">Ward 1 Stay Connected - Ward Sutherland</h1>
+      
+            <form name="contactCouncillor" method="post" action="StayConnected.aspx?ward=1" onsubmit="javascript:return WebForm_OnSubmit();" id="contactCouncillor" class="form" role="form" data-toggle="validator">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwOTA4NDk1NTEPZBYCAgEPZBYEAgEPZBYCAgEPZBYEAgIPZBYCAgEPZBYGAgEPDxYCHgRUZXh0ZWRkAgMPZBYQAgEPDxYCHwBlZGQCAw8PZBYCHgVzdHlsZQUMZGlzcGxheTpub25lZAIFDxAPFgQfAAWAASBZZXMsIEkgd291bGQgbGlrZSB0byByZWNlaXZlIGVsZWN0cm9uaWMgY29tbXVuaWNhdGlvbnMgd2l0aCBpbmZvcm1hdGlvbiByZWxhdGluZyB0byBteSB3YXJkLCBjb21tdW5pdHkgYW5kIHRoZSBDaXR5IG9mIENhbGdhcnkuHgdUb29sVGlwBYABIFllcywgSSB3b3VsZCBsaWtlIHRvIHJlY2VpdmUgZWxlY3Ryb25pYyBjb21tdW5pY2F0aW9ucyB3aXRoIGluZm9ybWF0aW9uIHJlbGF0aW5nIHRvIG15IHdhcmQsIGNvbW11bml0eSBhbmQgdGhlIENpdHkgb2YgQ2FsZ2FyeS5kZGRkAgcPDxYCHwIFUFRoZSBDaXR5IG9mIENhbGdhcnkgLSBDQVNMIEZvcm0uIApFbnRlciB5b3VyIGZpcnN0IG5hbWUuIFRoaXMgZmllbGQgaXMgcmVxdWlyZWQuZGQCCw8PZBYCHgdvbmZvY3VzBS9BZGRyZXNzQXV0b1N1Z2dlc3QoJ2N0bDE2X3R4dEFkZHJlc3MnLCAzMDAsIDMpO2QCGQ9kFgJmDxQrAAMPFgYeFUVuYWJsZUVtYmVkZGVkU2NyaXB0c2ceElJlc29sdmVkUmVuZGVyTW9kZQspclRlbGVyaWsuV2ViLlVJLlJlbmRlck1vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTYuMS4yMjUuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAEeF0VuYWJsZUFqYXhTa2luUmVuZGVyaW5naGQWAh4LQ3VycmVudEd1aWQFJDg2NWFmYTE4LTE1MWItNGZkYy05ZGU5LWZiMjM1MzAxOTkxNhQrAANkZGQWAgIBD2QWDAICD2QWAmYPZBYIZg8PFgoeBkhlaWdodBsAAAAAAABJQAEAAAAeBVdpZHRoGwAAAAAAgGZAAQAAAB4IQ3NzQ2xhc3NlHghJbWFnZVVybAVcfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1yY2EmaXNjPXRydWUmZ3VpZD04NjVhZmExOC0xNTFiLTRmZGMtOWRlOS1mYjIzNTMwMTk5MTYeBF8hU0ICggNkZAIBDw8WAh8ABRJHZW5lcmF0ZSBOZXcgSW1hZ2UWAh4FdGl0bGUFEkdlbmVyYXRlIE5ldyBJbWFnZWQCAg8WBB4JaW5uZXJodG1sBQ5HZXQgQXVkaW8gQ29kZR4EaHJlZgVkfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1jYWgmYW1wO2lzYz10cnVlJmFtcDtndWlkPTg2NWFmYTE4LTE1MWItNGZkYy05ZGU5LWZiMjM1MzAxOTkxNmQCAw8WBB8OBRNEb3dubG9hZCBBdWRpbyBDb2RlHw8FZH4vVGVsZXJpay5XZWIuVUkuV2ViUmVzb3VyY2UuYXhkP3R5cGU9Y2FoJmFtcDtpc2M9dHJ1ZSZhbXA7Z3VpZD04NjVhZmExOC0xNTFiLTRmZGMtOWRlOS1mYjIzNTMwMTk5MTZkAgMPDxYMHwgbAAAAAAAASUABAAAAHwkbAAAAAACAZkABAAAAHwplHwsFXH4vVGVsZXJpay5XZWIuVUkuV2ViUmVzb3VyY2UuYXhkP3R5cGU9cmNhJmlzYz10cnVlJmd1aWQ9ODY1YWZhMTgtMTUxYi00ZmRjLTlkZTktZmIyMzUzMDE5OTE2HwwCggMeB1Zpc2libGVoZGQCBA8WBB8OBQ5HZXQgQXVkaW8gQ29kZR8PBWR+L1RlbGVyaWsuV2ViLlVJLldlYlJlc291cmNlLmF4ZD90eXBlPWNhaCZhbXA7aXNjPXRydWUmYW1wO2d1aWQ9ODY1YWZhMTgtMTUxYi00ZmRjLTlkZTktZmIyMzUzMDE5OTE2ZAIFDxYEHw4FE0Rvd25sb2FkIEF1ZGlvIENvZGUfDwVkfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1jYWgmYW1wO2lzYz10cnVlJmFtcDtndWlkPTg2NWFmYTE4LTE1MWItNGZkYy05ZGU5LWZiMjM1MzAxOTkxNmQCBg9kFgJmDxYEHw0FF01pc3NpbmcgQnJvd3NlciBQbHVnLUluHw4FF01pc3NpbmcgQnJvd3NlciBQbHVnLUluZAIHD2QWBGYPDxYKHwplHglBY2Nlc3NLZXllHghUYWJJbmRleAEAAB8CZR8MAgJkZAIBDw8WBh8KZR8ABRxUeXBlIHRoZSBjb2RlIGZyb20gdGhlIGltYWdlHwwCAmRkAhsPZBYCZg8UKwADDxYGHwRnHwULKwQBHwZoZBYCHwcFJGFiZTNkZDdiLTI2ZjItNGExZi1hMzUzLWUyNzYwYmQ5Mjc3YhQrAANkZGQWAgIBD2QWDAICD2QWAmYPZBYIZg8PFgofCBsAAAAAAABJQAEAAAAfCRsAAAAAAIBmQAEAAAAfCmUfCwVcfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1yY2EmaXNjPXRydWUmZ3VpZD1hYmUzZGQ3Yi0yNmYyLTRhMWYtYTM1My1lMjc2MGJkOTI3N2IfDAKCA2RkAgEPDxYCHwAFEkdlbmVyYXRlIE5ldyBJbWFnZRYCHw0FEkdlbmVyYXRlIE5ldyBJbWFnZWQCAg8WBB8OBQ5HZXQgQXVkaW8gQ29kZR8PBWR+L1RlbGVyaWsuV2ViLlVJLldlYlJlc291cmNlLmF4ZD90eXBlPWNhaCZhbXA7aXNjPXRydWUmYW1wO2d1aWQ9YWJlM2RkN2ItMjZmMi00YTFmLWEzNTMtZTI3NjBiZDkyNzdiZAIDDxYEHw4FE0Rvd25sb2FkIEF1ZGlvIENvZGUfDwVkfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1jYWgmYW1wO2lzYz10cnVlJmFtcDtndWlkPWFiZTNkZDdiLTI2ZjItNGExZi1hMzUzLWUyNzYwYmQ5Mjc3YmQCAw8PFgwfCBsAAAAAAABJQAEAAAAfCRsAAAAAAIBmQAEAAAAfCmUfCwVcfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1yY2EmaXNjPXRydWUmZ3VpZD1hYmUzZGQ3Yi0yNmYyLTRhMWYtYTM1My1lMjc2MGJkOTI3N2IfDAKCAx8QaGRkAgQPFgQfDgUOR2V0IEF1ZGlvIENvZGUfDwVkfi9UZWxlcmlrLldlYi5VSS5XZWJSZXNvdXJjZS5heGQ/dHlwZT1jYWgmYW1wO2lzYz10cnVlJmFtcDtndWlkPWFiZTNkZDdiLTI2ZjItNGExZi1hMzUzLWUyNzYwYmQ5Mjc3YmQCBQ8WBB8OBRNEb3dubG9hZCBBdWRpbyBDb2RlHw8FZH4vVGVsZXJpay5XZWIuVUkuV2ViUmVzb3VyY2UuYXhkP3R5cGU9Y2FoJmFtcDtpc2M9dHJ1ZSZhbXA7Z3VpZD1hYmUzZGQ3Yi0yNmYyLTRhMWYtYTM1My1lMjc2MGJkOTI3N2JkAgYPZBYCZg8WBB8NBRdNaXNzaW5nIEJyb3dzZXIgUGx1Zy1Jbh8OBRdNaXNzaW5nIEJyb3dzZXIgUGx1Zy1JbmQCBw9kFgRmDw8WCh8KZR8RZR8SAQAAHwJlHwwCAmRkAgEPDxYGHwplHwAFHFR5cGUgdGhlIGNvZGUgZnJvbSB0aGUgaW1hZ2UfDAICZGQCHw8PFgIeEVVzZVN1Ym1pdEJlaGF2aW9yaGRkAgUPZBYCAgUPDxYCHwAF+AFCeSBzdWJtaXR0aW5nIHRoaXMgZm9ybSwgeW91IGdyYW50ZWQgeW91ciBwZXJtaXNzaW9uIGZvciB0aGUgQ291bmNpbCBPZmZpY2UgdG8gc2VuZCB5b3UgY29tbXVuaWNhdGlvbnMgYWJvdXQgeW91ciB3YXJkLCBjb21tdW5pdHkgb3IgQ2l0eSBvZiBDYWxnYXJ5IHJlbGF0ZWQgaW5mb3JtYXRpb24uIDxiciAvPg0KUGxlYXNlIHByaW50IGEgY29weSBvZiB0aGlzIGluZm9ybWF0aW9uIGZvciB5b3VyIHJlY29yZHMuIDxiciAvPjxiciAvPmRkAgQPDxYCHwZoZGQCBw8PFgIfBmhkZBgDBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwUSY3RsMTYkY2hrU2VuZE9wdEluBQtjdGwxNiRjdGwwMAULY3RsMTYkY3RsMDEFC2N0bDE2JGN0bDAxDxQrAAIFJGFiZTNkZDdiLTI2ZjItNGExZi1hMzUzLWUyNzYwYmQ5Mjc3YgYAAAAAAAAAAGQFC2N0bDE2JGN0bDAwDxQrAAIFJDg2NWFmYTE4LTE1MWItNGZkYy05ZGU5LWZiMjM1MzAxOTkxNgY9MPLfZg3YiGR94DaIE0PSmHDfjDQhzFrIwJCi3Q==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['contactCouncillor'];
+if (!theForm) {
+    theForm = document.contactCouncillor;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=AueWCtc-ir0ZBpPLlUK79jWDZmleii432KRTipJVzETJqDLguTKUJN-FHVJHYavph3BC9C2FvbzGYJne_MVrafVzmUM1&amp;t=636271455501517547" type="text/javascript"></script>
+
+
+<script src="//www1test.calgary.ca/sdc/WTcalgaryca.load.js " type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'contactCouncillor';//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=-k_qENIv6v22QMcm6SkIWzfZayoxbjTToG2wo8z8Iu0R0K4Yjo1OQMVo-lb9QD5HGiUP-hI-qYut6XMSCQWfEC4jA-lrWGBboASCpduD67NdcW5kupMEsheAytCzbZvfRheH8gobAYSOAzDTxUSpEgSM0Vc1&amp;t=4eaab336" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=uXD192c7fuqPSd-46SSM9cP-2PnJbFjALwcdb3D7aR-CAC9LO0lhHzEfRgznWlGcw6uElQMxDzLeVP7BMJ3PI4Xm1WWwATHLoNESybV3sRQ3IX_BKRX-UafO5Esk6qzdnFKvF89Yl71qrozIV9abIv72VvI1&amp;t=3f4a792d" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Uss-AAtutlBTuid3Aj1QRatmdDDCjN69zELghz9nzeWHQEhbsxZG4DpMCuSulJy6-D8dLnANprOLD8uRroW6CZXE07RjHSN-ErJbPixuVGUzEN6Zz4ja8Ls_kIyIteagvUWuOmLBr-MctduEs8TxDnlmkN7K4OK4-8kWg_1aIOIz2IhB0&amp;t=3f4a792d" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=xZlbyJMQOsSyhOnVXCBztOZCmnEOSivwPRu-n8dEk_RktySfI6Gu_3M6V4eC4vNspeYXWf7wHKpYtpRXT6OAKZ3klMEiEEtAA9QbjoM6kW6LTEk5bYZijdfzGm8zbB1J1atGQkMcUS_vnAQQC1t9tjOdEMywGKv4qSEAt4aJoUOYKeaW0&amp;t=ffffffffe6c67dd2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=rk_scoBMCB9OVYBlwIsVzO61eI7fzb_W7-9kU6T8uieytuiXxc3aein0-IZoPxOlVUZwyAe1jnMJWyn_sOmWhTeewuFDbooBC0cTxNrL63yUal_O4WMo6_dD9qo3-jGcazGCftis4zVO3_7FpQ_PTuFvfZYRoWI11QZiRK99npT7NTgI0&amp;t=ffffffffe6c67dd2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=071QnE9BmV4m6Mjbg4NYY0kYETsWOnykj4nvjFRXnIHVT8Y1GA3-pyZiSCgeFrOey6pGMlVx3f7Z2q4hU3-j5pLVmak4j7kn-BZRzazVEerCMpbwTuHQ5UKa-8crFYwFb7T1FTTmQwml5dm6n-iEdwWbGths0fcSPQgFJrNFm91rjHt50&amp;t=ffffffffe6c67dd2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=8V0hJuXdiw8FBDdiTGL80vLY0pJ9nvevP4qBe8nDntKw4DlhvbvDYTDITWeFbFUQ0IJm8tGdyhDhN7TVtaqQWv0WafLpQvU8P7EmKMe1oJnt-rGhZVXukHJlRa0HcD5L-lSTRvhLbA6zdgVk6M_hWaJuy5tr4JbhGmG6TPJWw7ZU_3ww0&amp;t=ffffffffe6c67dd2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=HwNJuy2fM_YoDPN8MV9VCrVngPHmGsqZPlMPYysQSJXyOGip-g8ngmaDgT1_neC6502_39S0OpdDb3Ekjd6ZxMadOmiPaCdMRX9bMkg3ILfUY-cJDazqDT-5-0IfPJbaojffYSEcpamDlQIBpMt595pOn-SVsTepC5nsFfttzSSnzsW1ZXhLxz_u_PYIifOjA_PkSg2&amp;t=ffffffffe6c67dd2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
 
 <div>
 
-<p>She's got a smile that it seems to me
-Reminds me of childhood memories
-Where everything was as fresh as the bright blue sky
-Now and then when I see her face
-She takes me away to that special place
-And if I stare too long, I'd probably break down and cry
-Whoa, oh, oh
-Sweet child o' mine
-Whoa, oh, oh, oh
-Sweet love of mine
-She's got eyes of the bluest skies
-As if they thought of rain
-I'd hate to look into those eyes and see an ounce of pain
-Her hair reminds me of a warm safe place
-Where as a child I'd hide
-And pray for the thunder and the rain to quietly pass me by
-Whoa, oh, oh
-Sweet child o' mine
-Whoa whoa, oh, oh, oh
-Sweet love of mine
-Whoa, yeah
-Whoa, oh, oh, oh
-Sweet child o' mine
-Whoa, oh, whoa, oh
-Sweet love of mine
-Whoa, oh, oh, oh
-Sweet child o' mine
-Ooh, yeah...  She's got a smile that it seems to me
-Reminds me of childhood memories
-Where everything was as fresh as the bright blue sky
-Now and then when I see her face
-She takes me away to that special place
-And if I stare too long, I'd probably break down and cry
-Whoa, oh, oh
-Sweet child o' mine
-Whoa, oh, oh, oh
-Sweet love of mine
-She's got eyes of the bluest skies
-As if they thought of rain
-I'd hate to look into those eyes and see an ounce of pain
-Her hair reminds me of a warm safe place
-Where as a child I'd hide
-And pray for the thunder and the rain to quietly pass me by
-Whoa, oh, oh
-Sweet child o' mine
-Whoa whoa, oh, oh, oh
-Sweet love of mine
-Whoa, yeah
-Whoa, oh, oh, oh
-Sweet child o' mine
-Whoa, oh, whoa, oh
-Sweet love of mine
-Whoa, oh, oh, oh
-Sweet child o' mine
-Ooh, yeah...    She's got a smile that it seems to me
-Reminds me of childhood memories
-Where everything was as fresh as the bright blue sky
-Now and then when I see her face
-She takes me away to that special place
-And if I stare too long, I'd probably break down and cry
-Whoa, oh, oh
-Sweet child o' mine
-Whoa, oh, oh, oh
-Sweet love of mine
-She's got eyes of the bluest skies
-As if they thought of rain
-I'd hate to look into those eyes and see an ounce of pain
-Her hair reminds me of a warm safe place
-Where as a child I'd hide
-And pray for the thunder and the rain to quietly pass me by
-Whoa, oh, oh
-Sweet child o' mine
-Whoa whoa, oh, oh, oh
-Sweet love of mine
-Whoa, yeah
-Whoa, oh, oh, oh
-Sweet child o' mine
-Whoa, oh, whoa, oh
-Sweet love of mine
-Whoa, oh, oh, oh
-Sweet child o' mine
-Ooh, yeah...      </p>
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="399A9922" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDQK+g4ymBgKH0dSjBgKo8PmVAgLsip9yAo/U87AEAvvl79QOAtCPxqkEAtut8KIIAtfskgUCn8GMgg8C8LXLgAsC0NG88ggCzIa8pwHobcV+q7CnpZoY7nBU3Kskt2/N0g==" />
+</div>
+	            <!-- Content area --> 
+ 	            <div id="divMainContainer" class="cocis-container coc-pl">           
+                
+
+<script type="text/javascript" src="/foresee/foresee-trigger.js"></script>
+<!--script type="text/javascript" src="/Style Library/cocis/js/Constants.js"></script-->
+<script type="text/javascript" src="~/_layouts/cocis/CalgaryMap/js/DataContracts.js"></script>
+<script type="text/javascript" src="~/_layouts/cocis/CalgaryMap/js/jquery.json-2.2.js"></script>
+<script src="/_layouts/CoCIS/Applications/AutoSuggest/AddressAutoSuggest.js" type="text/javascript"></script>
+
+<img id="cocois-wp-start" src="/_layouts/CoCIS/Applications/WPBoundary.gif" alt="Begin application section" style="display:none" />
+
+<div id="ctl16_pnlCASLControls" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl16_btnSubmit')">
+	
+	<div id="ctl16_acApp">
+		<span class="RadAjaxPanel" id="ctl16_lblErrorMsgPanel"></span>
+		<span class="RadAjaxPanel" id="ctl16_acAppInfoPanel"><div id="ctl16_acAppInfo">
+
+			<p><span id="ctl16_lblMiscNote"></span></p>
+
+			<p class="label-required">All fields are required.</p>
+
+			<span class="RadAjaxPanel" id="ctl16_lblMyCASLClausePanel"></span>
+
+
+			<div class="form-group form-check">
+				<span class="RadAjaxPanel" id="ctl16_chkSendOptInPanel"><span title=" Yes, I would like to receive electronic communications with information relating to my ward, community and the City of Calgary."><input id="ctl16_chkSendOptIn" type="checkbox" name="ctl16$chkSendOptIn" /><label for="ctl16_chkSendOptIn"> Yes, I would like to receive electronic communications with information relating to my ward, community and the City of Calgary.</label></span></span>
+			</div>
+
+			<section class="form-section">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>First Name</label>
+						<span class="RadAjaxPanel" id="ctl16_txtFirstNamePanel"><input name="ctl16$txtFirstName" type="text" maxlength="50" id="ctl16_txtFirstName" title="The City of Calgary - CASL Form. 
+Enter your first name. This field is required." class="form-control" /></span>
+					</div>
+
+					<div class="col-sm-6 form-group">
+						<label>Last Name</label>
+						<span class="RadAjaxPanel" id="ctl16_txtLastNamePanel"><input name="ctl16$txtLastName" type="text" maxlength="50" id="ctl16_txtLastName" title="Enter your last name. This field is required." class="form-control" /></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 form-group">
+						<label>Address</label>
+						<span class="RadAjaxPanel" id="ctl16_txtAddressPanel"><input name="ctl16$txtAddress" type="text" maxlength="100" id="ctl16_txtAddress" title="Enter your full address. This field is required. Start typing to activate the address auto-suggest feature. Use the up/down arrow keys to select from a list of valid addresses or type the address into the box." class="form-control" onfocus="AddressAutoSuggest('ctl16_txtAddress', 300, 3);" /></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-9 col-sm-6 form-group">
+						<label>City/Town</label>
+						<span class="RadAjaxPanel" id="ctl16_txtCityPanel"><input name="ctl16$txtCity" type="text" value="Calgary" maxlength="50" id="ctl16_txtCity" title="Enter your city. This field is required." class="form-control" /></span>
+					</div>
+
+					<div class="col-xs-9 col-sm-6 form-group">
+						<label>Province/State</label>
+						<span class="RadAjaxPanel" id="ctl16_txtProvincePanel"><input name="ctl16$txtProvince" type="text" value="AB" maxlength="15" id="ctl16_txtProvince" title="Enter your province or state. This field is required for Canadian and US addresses." class="form-control" /></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-9 col-sm-6 form-group">
+						<label>Country</label>
+						<span class="RadAjaxPanel" id="ctl16_txtCountryPanel"><input name="ctl16$txtCountry" type="text" value="Canada" maxlength="15" id="ctl16_txtCountry" title="Enter your country. This field is required." class="form-control" /></span>
+					</div>
+
+					<div class="col-xs-9 col-sm-6 form-group">
+						<label>Postal code</label>
+						<span class="RadAjaxPanel" id="ctl16_txtPostalPanel"><input name="ctl16$txtPostal" type="text" maxlength="10" id="ctl16_txtPostal" title="Enter your postal or zip code, (e.g. T2P 2M5, 20500). This field is required for Canadian and US addresses." class="form-control input-width-sm" /></span>
+						<p class="form-text">(e.g. T2P 2M5, 20500)</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-9 col-md-8 form-group">
+						<label>Email</label>
+						<span class="RadAjaxPanel" id="ctl16_txtEmailPanel"><input name="ctl16$txtEmail" type="text" maxlength="60" id="ctl16_txtEmail" title="Enter your email address. This field is required." class="form-control" /></span>
+					</div>
+				</div>
+			</section>
+
+			<h3>Privacy information</h3>
+			<p style="max-width: 80%;">The personal information on this form is collected under the authority of the Freedom of Information and Protection of Privacy Act (FOIP), Section R.S.A 2000, c. F-25 33(c). The personal information on this form is used under the authority of FOIP, Section R.S.A 2000, c. F-25 39, solely for the purpose of Council Members of the City of Calgary to communicate ward, community or City of Calgary related information. For additional information, contact the Manager, Office of the Councillors, 800 Macleod Tr. SE., Calgary, Alberta, T2P 2M5, Phone 403-268-2430.</p>
+
+			
+			<div id="ctl16_divCaptcha2" class="cocis-wp-captcha" aria-hidden="true"><div id="ctl16_ctl00" class="RadCaptcha RadCaptcha_Default">
+		<!-- 2016.1.225.35 --><span id="ctl16_ctl00_ctl00" style="color:Red;visibility:hidden;"></span><div id="ctl16_ctl00_SpamProtectorPanel">
+
+		</div><input id="ctl16_ctl00_ClientState" name="ctl16_ctl00_ClientState" type="hidden" />
+	</div></div>
+			<div id="ctl16_divCaptcha3" class="cocis-wp-captcha" aria-hidden="true"><div id="ctl16_ctl01" class="RadCaptcha RadCaptcha_Default">
+		<span id="ctl16_ctl01_ctl00" style="color:Red;visibility:hidden;"></span><div id="ctl16_ctl01_SpamProtectorPanel">
+			<label for="ctl16_ctl01_InvisibleTextBox" id="ctl16_ctl01_HiddenLabel" style="display:none;">Do not fill this textbox.</label><input name="ctl16$ctl01$InvisibleTextBox" type="text" id="ctl16_ctl01_InvisibleTextBox" style="display:none;" />
+		</div><input id="ctl16_ctl01_ClientState" name="ctl16_ctl01_ClientState" type="hidden" />
+	</div></div>
+            <div>
+                <input type="hidden" name="ctl16$hidWPToken" id="ctl16_hidWPToken" value="83561756-b6b1-4bc9-bca0-731ecfc533e7" />
+            </div>
+			<div class="form-group">
+				<span class="RadAjaxPanel" id="ctl16_btnSubmitPanel"><input type="button" name="ctl16$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl16$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl16_btnSubmit" title="Submit" class="cui btn-md primary" /></span>
+			</div>
+		</div><span class="RadAjaxPanel" id="ctl16_btnSubmitPanel"></span><span class="RadAjaxPanel" id="ctl16_lblMyCASLClausePanel"></span><span class="RadAjaxPanel" id="ctl16_txtFirstNamePanel"></span><span class="RadAjaxPanel" id="ctl16_txtLastNamePanel"></span><span class="RadAjaxPanel" id="ctl16_txtAddressPanel"></span><span class="RadAjaxPanel" id="ctl16_txtCityPanel"></span><span class="RadAjaxPanel" id="ctl16_txtProvincePanel"></span><span class="RadAjaxPanel" id="ctl16_txtCountryPanel"></span><span class="RadAjaxPanel" id="ctl16_txtPostalPanel"></span><span class="RadAjaxPanel" id="ctl16_txtEmailPanel"></span><span class="RadAjaxPanel" id="ctl16_chkSendOptInPanel"></span></span>
+
+		<span class="RadAjaxPanel" id="ctl16_acConfirmationPanel"></span>
+	</div>
+
 </div>
 
-<script>
+<img id="cocis-wp-end" src="/_layouts/CoCIS/Applications/WPBoundary.gif" alt="End application section" style="display:none" />
+
+<div id="ctl16_radAjaxLoadingPanel" style="display:none;">
+	
+	<div style="width:200px; border: 1px solid silver; background-color:White;">
+		<img id="ctl16_imgLoading" src="/_layouts/CoCIS/Applications/loading.gif" alt="The submission is in progress" style="border-width:0px;" />
+		Processing ...
+	</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+    function FocusControl(controlID) {
+        var control = document.getElementById(controlID);
+        if (control) {
+            var oldTabIndex = control.tabIndex;
+            control.tabIndex = -1;
+            control.focus();
+            control.tabIndex = oldTabIndex;
+        }
+    }
+</script>
+</div>  
+                
+                <div>
+                    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', document.getElementById('contactCouncillor'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl16$acAppInfoPanel','tctl16$btnSubmitPanel','tctl16$lblErrorMsgPanel','tctl16$lblMyCASLClausePanel','tctl16$txtFirstNamePanel','tctl16$txtLastNamePanel','tctl16$txtAddressPanel','tctl16$txtCityPanel','tctl16$txtProvincePanel','tctl16$txtCountryPanel','tctl16$txtPostalPanel','tctl16$txtEmailPanel','tctl16$chkSendOptInPanel','tctl16$acConfirmationPanel','tRadAjaxManager1SU'], [], [], 90);
+//]]>
+</script>
+
+
+                    <div id="RadAjaxManager1SU">
+	<span id="RadAjaxManager1" style="display:none;"></span>
+</div>
+                    <div id="radAjaxLoadingPanel" style="display:none;">
+	
+                        <div style="width:200px; border: 1px solid silver; background-color:White;">
+                            <img id="imgLoading" src="/_layouts/CoCIS/Applications/loading.gif" alt="The search is in progress" style="border-width:0px;" />
+                            Processing ...
+                        </div>
+                    
+</div>
+                </div>
+            
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl16_ctl00_ctl00"), document.getElementById("ctl16_ctl01_ctl00"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl16_ctl00_ctl00 = document.all ? document.all["ctl16_ctl00_ctl00"] : document.getElementById("ctl16_ctl00_ctl00");
+ctl16_ctl00_ctl00.evaluationfunction = "CustomValidatorEvaluateIsValid";
+var ctl16_ctl01_ctl00 = document.all ? document.all["ctl16_ctl01_ctl00"] : document.getElementById("ctl16_ctl01_ctl00");
+ctl16_ctl01_ctl00.evaluationfunction = "CustomValidatorEvaluateIsValid";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var _fV4UI = true;
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ctl16_ctl00_ctl00').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl16_ctl00_ctl00'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadCaptcha, {"_audioUrl":"/Telerik.Web.UI.WebResource.axd?type=cah&isc=true&guid=865afa18-151b-4fdc-9de9-fb2353019916","_enableAudio":false,"_persistCode":false,"clientStateFieldID":"ctl16_ctl00_ClientState"}, null, null, $get("ctl16_ctl00"));
+});
+
+document.getElementById('ctl16_ctl01_ctl00').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl16_ctl01_ctl00'));
+}
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadCaptcha, {"_audioUrl":"/Telerik.Web.UI.WebResource.axd?type=cah&isc=true&guid=abe3dd7b-26f2-4a1f-a353-e2760bd9277b","_enableAudio":false,"_persistCode":false,"clientStateFieldID":"ctl16_ctl01_ClientState"}, null, null, $get("ctl16_ctl01"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":500,"isSticky":false,"minDisplayTime":500,"skin":"","uniqueID":"ctl16$radAjaxLoadingPanel","zIndex":90000}, null, null, $get("ctl16_radAjaxLoadingPanel"));
+});
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[{InitControlID : "ctl16_btnSubmit",UpdatedControls : [{ControlID:"ctl16_acAppInfo",PanelID:""},{ControlID:"ctl16_btnSubmit",PanelID:"radAjaxLoadingPanel"},{ControlID:"",PanelID:""},{ControlID:"ctl16_lblErrorMsg",PanelID:""},{ControlID:"",PanelID:""},{ControlID:"ctl16_lblMyCASLClause",PanelID:""},{ControlID:"ctl16_txtFirstName",PanelID:""},{ControlID:"ctl16_txtLastName",PanelID:""},{ControlID:"ctl16_txtAddress",PanelID:""},{ControlID:"ctl16_txtCity",PanelID:""},{ControlID:"ctl16_txtProvince",PanelID:""},{ControlID:"ctl16_txtCountry",PanelID:""},{ControlID:"ctl16_txtPostal",PanelID:""},{ControlID:"ctl16_txtEmail",PanelID:""},{ControlID:"ctl16_chkSendOptIn",PanelID:""},{ControlID:"ctl16_acConfirmation",PanelID:""}]},{InitControlID : "",UpdatedControls : [{ControlID:"ctl16_acAppInfo",PanelID:""},{ControlID:"ctl16_btnSubmit",PanelID:""},{ControlID:"",PanelID:""},{ControlID:"ctl16_lblErrorMsg",PanelID:""},{ControlID:"",PanelID:""},{ControlID:"ctl16_lblMyCASLClause",PanelID:""},{ControlID:"ctl16_txtFirstName",PanelID:""},{ControlID:"ctl16_txtLastName",PanelID:""},{ControlID:"ctl16_txtAddress",PanelID:""},{ControlID:"ctl16_txtCity",PanelID:""},{ControlID:"ctl16_txtProvince",PanelID:""},{ControlID:"ctl16_txtCountry",PanelID:""},{ControlID:"ctl16_txtPostal",PanelID:""},{ControlID:"ctl16_txtEmail",PanelID:""},{ControlID:"ctl16_chkSendOptIn",PanelID:""},{ControlID:"ctl16_acConfirmation",PanelID:""}]}],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":500,"isSticky":false,"minDisplayTime":500,"skin":"","uniqueID":"radAjaxLoadingPanel","zIndex":90000}, null, null, $get("radAjaxLoadingPanel"));
+});
+//]]>
+</script>
+</form>
+        </div><!--container-fluid--> 
+    </main>
+
+    
+
+    <!-- Analytics section -->
+
+    <!-- Copyright (c) 1996-2010 WebTrends Inc.  All rights reserved. -->
+    <!-- Version: 9.3.0 -->
+    <!-- Tag Builder Version: 3.1  -->
+    <!-- Created: 11/29/2010 6:08:17 PM -->
+    <!-- ----------------------------------------------------------------------------------- -->
+    <!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
+    <!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
+    <!-- ----------------------------------------------------------------------------------- -->
+
+
+    <!-- END OF SmartSource Data Collector TAG -->
+    <!-- End of Analytics section -->
+
+   <script>
 
 function getDocHeight(doc) {
     doc = doc || document;
@@ -95,7 +348,7 @@ function getDocHeight(doc) {
 
     var height = Math.max( body.scrollHeight, body.offsetHeight, 
         html.clientHeight, html.scrollHeight, html.offsetHeight );
-window.alert("Child's content height: "+height);
+//window.alert("Child's content height: "+height);
     return height;
 }
 
