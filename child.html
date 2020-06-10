@@ -913,10 +913,6 @@ window.alert("Child's content height: "+height);
 // send docHeight onload
 function sendDocHeightMsg(e) {
     var ht = getDocHeight();
-	var url = window.location.href
-	var arr = url.split("/");
-	var result = arr[0] + "//" + arr[2]
-	var hostname= window.location.host;
 	console.log("docHeight is: "+ht);
     window.parent.postMessage( JSON.stringify( {'docHeight': ht} ), '*' );
 }
