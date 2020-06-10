@@ -106,6 +106,7 @@ function sendDocHeightMsg(e) {
 	var arr = url.split("/");
 	var result = arr[0] + "//" + arr[2]
 	var hostname= window.location.host;
+	console.log("docHeight is: "+ht);
     window.parent.postMessage( JSON.stringify( {'docHeight': ht} ), 'http://localhost:4512' );
 }
 
